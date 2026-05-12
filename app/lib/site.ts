@@ -16,6 +16,7 @@ export const routes = [
   "/",
   "/quem-somos",
   "/servicos",
+  "/traducao-juramentada-para-cidadania-italiana",
   "/traducao-juramentada-italiano",
   "/apostilar-documento-italiano-na-italia",
   "/faq",
