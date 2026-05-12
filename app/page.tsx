@@ -15,7 +15,7 @@ import { siteUrl } from "./lib/site";
 export const metadata: Metadata = {
   title: "Tradução de Documentos Brasil-Itália",
   description:
-    "Tradução de documentos brasileiros e italianos para cidadania, imigração, casamento, diplomas, certidões e uso oficial. Atendimento em português para Brasil e Itália.",
+    "Traduzioni giurate Brasile-Italia con massima attenzione, responsabilità e rapidità. Traduzioni ufficiali per cittadinanza, documenti e pratiche in Italia, con prezzi chiari e supporto in italiano e portoghese.",
   alternates: {
     canonical: "/",
   },
