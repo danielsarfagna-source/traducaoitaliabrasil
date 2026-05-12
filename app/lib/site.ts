@@ -1,12 +1,12 @@
-export const WHATSAPP_NUMBER = "353833278766";
+export const WHATSAPP_NUMBER = "353831000159";
 
 export const WHATSAPP_MESSAGE =
-  "Olá, gostaria de solicitar um orçamento para tradução juramentada português → italiano ou tradução italiano → português. Posso enviar meus documentos?";
+  "Olá, vim pelo TraducaoBrasilItalia e gostaria de informações sobre a tradução do meu documento.";
 
 export const WHATSAPP_URL =
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://traducao-juramentada-italiano.com";
+export const siteUrl = "https://traducaobrasilitalia.it";
 
 export function whatsappHref(message = WHATSAPP_MESSAGE) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

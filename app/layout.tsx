@@ -1,26 +1,31 @@
 import type { Metadata } from "next";
 import { CookieBanner } from "./components/cookie-banner";
 import "./globals.css";
+import { siteUrl } from "./lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://traducao-juramentada-italiano.com"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Tradução Juramentada Português Italiano em Toda a Itália",
-    template: "%s | Tradução Juramentada Português ↔ Italiano",
+    default: "Tradução de Documentos Brasil-Itália | TraducaoBrasilItalia",
+    template: "%s | TraducaoBrasilItalia",
   },
   description:
-    "Tradução juramentada português → italiano, tradução italiano → português, apostilamento e orientação documental para cidadania italiana, imigração, casamento, diplomas e certidões.",
+    "Tradução de documentos entre português e italiano para cidadania italiana, imigração, casamento, diplomas, certidões e uso oficial no Brasil e na Itália.",
   keywords: [
+    "tradução de documentos Brasil Itália",
     "tradução juramentada para italiano",
     "tradução juramentada português italiano",
+    "tradução documentos brasileiros Itália",
     "apostila de haia Itália",
     "documentos para cidadania italiana",
     "tradução italiano português",
   ],
   openGraph: {
-    title: "Tradução Juramentada Português ↔ Italiano em toda a Itália",
+    title: "Tradução de Documentos Brasil-Itália | TraducaoBrasilItalia",
     description:
-      "Atendimento em português para tradução juramentada português → italiano, tradução italiano → português, apostilamento e documentos oficiais.",
+      "Atendimento em português para tradução de documentos, tradução juramentada, apostilamento e orientação documental entre Brasil e Itália.",
+    url: siteUrl,
+    siteName: "TraducaoBrasilItalia",
     images: ["/assets/hero-professional-wide.png"],
     locale: "pt_BR",
     type: "website",

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { CTASection } from "./components/cta-section";
 import { FAQAccordion } from "./components/faq-accordion";
 import { Footer } from "./components/footer";
@@ -10,6 +11,15 @@ import { TrustCard } from "./components/trust-card";
 import { WhatsAppButton } from "./components/whatsapp-button";
 import { faqItems, serviceCards } from "./lib/content";
 import { siteUrl } from "./lib/site";
+
+export const metadata: Metadata = {
+  title: "Tradução de Documentos Brasil-Itália",
+  description:
+    "Tradução de documentos brasileiros e italianos para cidadania, imigração, casamento, diplomas, certidões e uso oficial. Atendimento em português para Brasil e Itália.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 const benefits = [
   ["◇", "Atendimento em português"],
