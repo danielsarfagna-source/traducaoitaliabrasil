@@ -65,6 +65,11 @@ const reasons = [
 
 const articles = [
   {
+    title: "Tradução juramentada para cidadania italiana",
+    href: "/traducao-juramentada-para-cidadania-italiana",
+    text: "Orientação para certidões brasileiras, documentos familiares, tradução oficial e cuidados antes de apresentar documentos na Itália.",
+  },
+  {
     title: "Tradução juramentada português para italiano: quando precisa e como fazer na Itália",
     href: "/traducao-juramentada-italiano",
     text: "Guia para documentos brasileiros usados perante comunes, universidades, imigração e órgãos oficiais italianos.",
@@ -291,7 +296,7 @@ function Articles() {
       <div className="mx-auto max-w-[1180px]">
         <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-[#d9aa52]">Guias oficiais</p>
         <h2 className="mt-4 text-center font-serif text-4xl text-white sm:text-5xl">Artigos para processos na Itália</h2>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
           {articles.map((article) => (
             <Link key={article.href} href={article.href} className="rounded-[8px] border border-[#c99a45]/42 bg-[#020912] p-7 transition hover:border-[#d9aa52] hover:bg-[#071521]">
               <h3 className="font-serif text-2xl leading-8 text-white">{article.title}</h3>

@@ -6,7 +6,7 @@ import { whatsappHref } from "../lib/site";
 export function Footer() {
   return (
     <footer className="border-t border-[#d8a84f]/22 bg-[#020817] px-5 py-12 text-[#f8f5ee]/72 sm:px-8 lg:px-12">
-      <div className="mx-auto grid max-w-[1480px] gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+      <div className="mx-auto grid max-w-[1480px] gap-10 md:grid-cols-2 lg:grid-cols-[1.15fr_0.75fr_0.85fr_0.65fr]">
         <div>
           <h2 className="font-serif text-2xl text-[#f8f5ee]">TRADUÇÃO JURAMENTADA</h2>
           <p className="mt-3 max-w-xl leading-7">
@@ -25,6 +25,14 @@ export function Footer() {
             <Link href="/politica-de-privacidade">Política de privacidade</Link>
             <Link href="/cookie-policy">Política de cookies</Link>
             <Link href="/termos-de-uso">Termos de uso</Link>
+          </nav>
+        </div>
+        <div>
+          <h3 className="font-serif text-xl text-[#f8f5ee]">Guias úteis</h3>
+          <nav className="mt-4 grid gap-2">
+            <Link href="/traducao-juramentada-para-cidadania-italiana">Tradução para cidadania italiana</Link>
+            <Link href="/traducao-juramentada-italiano">Tradução português italiano</Link>
+            <Link href="/apostilar-documento-italiano-na-italia">Apostila de Haia na Itália</Link>
           </nav>
         </div>
         <div>
