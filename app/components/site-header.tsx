@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { whatsappHref } from "../lib/site";
@@ -16,24 +17,22 @@ const navItems = [
 ];
 
 export function SiteHeader() {
+
   const [open, setOpen] = useState(false);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#d8a84f]/25 bg-[#020817]/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-20 max-w-[1480px] items-center justify-between px-5 sm:px-8 lg:px-12">
-        <Link href="/" className="flex min-w-0 items-center gap-3" aria-label="TRADUÇÃO JURAMENTADA">
-          <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[#017b43] text-sm">BR</span>
-          <span className="grid size-9 shrink-0 place-items-center rounded-full bg-[linear-gradient(90deg,#16804b_0_33%,#fff_33%_66%,#bd2b32_66%)] text-[0px]">IT</span>
-          <span className="min-w-0">
-            <span className="block font-serif text-lg leading-none tracking-[0.08em] text-[#f8f5ee] sm:text-2xl">
-              TRADUÇÃO JURAMENTADA
-            </span>
-            <span className="mt-2 block truncate text-[0.62rem] font-medium tracking-[0.22em] text-[#f8f5ee]/82 sm:text-xs">
-              PORTUGUÊS ↔ ITALIANO • TODA A ITÁLIA
-            </span>
-          </span>
+      <div className="mx-auto flex h-24 max-w-[1480px] items-center justify-between px-5 sm:px-8 lg:px-12">
+        <Link href="/" className="relative h-16 w-64 transition hover:opacity-90" aria-label="TRADUÇÃO JURAMENTADA">
+          <Image
+            src="/assets/logo-premium.png"
+            alt="TRADUÇÃO JURAMENTADA — Português ↔ Italiano"
+            fill
+            className="object-contain object-left"
+            priority
+          />
         </Link>
-
+...
         <nav className="hidden items-center gap-5 text-sm text-[#f8f5ee]/88 xl:flex">
           {navItems.map(([label, href], index) => (
             <Link key={label} href={href} className={`border-b py-2 transition hover:border-[#d8a84f] hover:text-[#d8a84f] ${index === 0 ? "border-[#d8a84f] text-[#d8a84f]" : "border-transparent"}`}>

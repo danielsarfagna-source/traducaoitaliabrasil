@@ -1,8 +1,8 @@
 import { WhatsAppButton } from "./whatsapp-button";
 
 export function CTASection({
-  title = "Precisa traduzir ou apostilar um documento?",
-  text = "Envie uma foto ou PDF pelo WhatsApp e receba orientação sobre o melhor caminho para o seu caso.",
+  title = "Me manda só uma foto do documento.",
+  text = "Em poucos minutos eu te digo se serve, quanto custa e o prazo. Sem compromisso.",
   button = "Falar no WhatsApp",
 }: {
   title?: string;

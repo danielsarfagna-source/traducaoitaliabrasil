@@ -7,26 +7,28 @@ import { Footer } from "./components/footer";
 import { SectionTitle } from "./components/section-title";
 import { ServiceCard } from "./components/service-card";
 import { SiteHeader } from "./components/site-header";
+import { Testimonials } from "./components/testimonials";
 import { TrustCard } from "./components/trust-card";
 import { WhatsAppButton } from "./components/whatsapp-button";
 import { faqItems, serviceCards } from "./lib/content";
 import { siteUrl } from "./lib/site";
 
 export const metadata: Metadata = {
-  title: "Tradução de Documentos Brasil-Itália",
+  title: "Tradução Juramentada Brasil ↔ Itália | Atendimento em Português",
   description:
-    "Traduzioni giurate Brasile-Italia con massima attenzione, responsabilità e rapidità. Traduzioni ufficiali per cittadinanza, documenti e pratiche in Italia, con prezzi chiari e supporto in italiano e portoghese.",
+    "Tradução juramentada de qualquer documento — CNH, diplomas, certidões, cidadania. Aceita em toda a Itália. Orientação e orçamento rápido pelo WhatsApp.",
   alternates: {
     canonical: "/",
   },
 };
 
 const benefits = [
-  ["◇", "Atendimento em português"],
+  ["✓", "Atendimento em português"],
   ["◷", "Rápido (24–48h)"],
   ["◆", "Aceitamos PIX"],
   ["€", "Pagamento em euro e em reais"],
 ];
+
 
 const serviceBar = [
   ["▧", "Tradução juramentada"],
@@ -56,10 +58,10 @@ const needs = [
 
 const reasons = [
   "Atendimento em português",
-  "Clareza sobre documentos necessários",
+  "Clareza sobre os documentos necessários",
   "Suporte do início ao fim",
   "Rapidez na análise",
-  "Pagamento facilitado",
+  "Preço justo e fechado antes de começar",
   "Atendimento em toda a Itália",
 ];
 
@@ -88,7 +90,7 @@ function Hero() {
       <div className="absolute inset-y-20 right-0 hidden w-[66vw] lg:block">
         <Image
           src="/assets/hero-professional-wide.png"
-          alt="Profissional carimbando documentos oficiais com passaporte brasileiro e Roma ao fundo"
+          alt="Tradução juramentada oficial entre Brasil e Itália"
           fill
           priority
           sizes="66vw"
@@ -105,18 +107,14 @@ function Hero() {
         <div className="max-w-[690px] pb-2 lg:pb-20">
           <p className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#e2ae58]">
             <span className="h-px w-8 bg-[#d8a84f]" />
-            Traduções oficiais para quem exige excelência
+            Atendimento em português · Rápido (24–48h) · Aceitamos PIX
           </p>
           <h1 className="font-serif text-[3.05rem] leading-[0.96] tracking-normal text-[#f8f5ee] sm:text-[4.65rem] lg:text-[5.15rem]">
-            Tradução Juramentada
-            <span className="block">Português ↔ Italiano</span>
-            <em className="block font-serif text-[0.82em] font-normal italic text-[#d8a84f]">
-              em toda a Itália
-            </em>
+            Seu documento traduzido certo
+            <span className="block text-[0.6em] mt-4 opacity-90">— sem retrabalho, sem perder prazo.</span>
           </h1>
           <p className="mt-6 max-w-[640px] text-lg leading-8 text-[#f8f5ee]/86 sm:text-xl">
-            Documentos para cidadania, imigração, casamento, estudo e uso oficial.
-            Atendimento em português, rapidez e suporte completo até a entrega.
+            Tradução juramentada português ↔ italiano de qualquer documento — CNH, diplomas, certidões, permesso di soggiorno, cidadania e mais. Aceita em toda a Itália. Atendimento de brasileiro para brasileiro, do primeiro documento até a entrega.
           </p>
 
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -129,18 +127,11 @@ function Hero() {
           </div>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <WhatsAppButton className="group flex min-h-20 items-center gap-4 rounded-[8px] bg-[linear-gradient(135deg,#f3cf80,#d8a84f_48%,#ad711f)] px-6 text-[#020817] shadow-[0_18px_48px_rgba(216,168,79,0.30)] transition hover:translate-y-[-1px]">
+            <WhatsAppButton className="group flex min-h-20 items-center gap-4 rounded-[8px] bg-[linear-gradient(135deg,#f3cf80,#d8a84f_48%,#ad711f)] px-8 text-[#020817] shadow-[0_18px_48px_rgba(216,168,79,0.30)] transition hover:translate-y-[-1px]">
               <span className="text-4xl">☏</span>
               <span>
-                <span className="block text-sm font-black uppercase tracking-[0.06em]">Falar no WhatsApp agora</span>
-                <span className="mt-1 block text-sm">Envie seu documento em 1 minuto</span>
-              </span>
-            </WhatsAppButton>
-            <WhatsAppButton className="flex min-h-20 items-center gap-4 rounded-[8px] border border-[#d8a84f]/70 bg-[#07111f]/78 px-6 text-[#f8f5ee] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition hover:bg-[#0b1628]">
-              <span className="text-4xl text-[#d8a84f]">▤</span>
-              <span>
-                <span className="block text-sm font-black uppercase tracking-[0.06em]">Pedir orçamento</span>
-                <span className="mt-1 block text-sm text-[#f8f5ee]/72">Resposta rápida</span>
+                <span className="block text-lg font-black uppercase tracking-[0.04em]">Enviar meu documento agora</span>
+                <span className="mt-0.5 block text-sm opacity-90">Resposta no WhatsApp em poucos minutos.</span>
               </span>
             </WhatsAppButton>
           </div>
@@ -150,7 +141,7 @@ function Hero() {
           <div className="relative h-[430px] w-full overflow-hidden rounded-[8px] sm:h-[520px] lg:hidden">
             <Image
               src="/assets/hero-professional-wide.png"
-              alt="Profissional carimbando documentos oficiais com passaporte brasileiro e Roma ao fundo"
+              alt="Tradução juramentada oficial"
               fill
               priority
               sizes="100vw"
@@ -246,8 +237,8 @@ function WhyChoose() {
       <div className="mx-auto max-w-[1180px]">
         <SectionTitle
           eyebrow="Por que escolher este atendimento"
-          title="Menos burocracia, mais clareza"
-          text="Você fala com alguém que entende português, entende a burocracia italiana e orienta o caminho correto antes de você gastar tempo e dinheiro com documentos errados."
+          title="Você não está comprando uma tradução. Está comprando a tranquilidade de não recomeçar o processo."
+          text="Documento traduzido errado significa meses perdidos, taxa paga de novo e prazo estourado. Eu confiro a finalidade antes de traduzir e te aviso se algo está faltando — em português, sem juridiquês."
         />
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((reason) => (
@@ -312,6 +303,24 @@ function Articles() {
   );
 }
 
+function PriceSection() {
+
+  return (
+    <section className="bg-[#020817] px-5 py-20 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-[1180px] rounded-[8px] border border-[#d8a84f]/40 bg-[#07111f]/60 p-8 text-center md:p-14">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#d8a84f]">Orçamento rápido</p>
+        <h2 className="mt-4 font-serif text-4xl text-[#f8f5ee] sm:text-5xl">Preço justo e fechado antes de começar.</h2>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#f8f5ee]/80">
+          Você recebe o valor exato pelo WhatsApp em minutos — sem surpresa e sem taxa escondida. Você aprova e só então eu começo.
+        </p>
+        <WhatsAppButton className="mt-10 inline-flex rounded-[8px] bg-[linear-gradient(135deg,#f3cf80,#d8a84f_48%,#ad711f)] px-10 py-6 text-sm font-black uppercase tracking-[0.1em] text-[#020817] shadow-[0_20px_50px_rgba(216,168,79,0.25)] transition hover:translate-y-[-2px]">
+          Pedir meu orçamento
+        </WhatsAppButton>
+      </div>
+    </section>
+  );
+}
+
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
@@ -327,14 +336,19 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <SiteHeader />
       <Hero />
+      <Testimonials />
       <ServiceBar />
       <ProcessAndNeeds />
       <ServicesSection />
       <WhyChoose />
+      <PriceSection />
       <AboutPreview />
       <HomeFAQ />
       <Articles />
-      <CTASection />
+      <CTASection
+        title="Me manda só uma foto do documento."
+        text="Em poucos minutos eu te digo se serve, quanto custa e o prazo. Sem compromisso."
+      />
       <Footer />
     </main>
   );

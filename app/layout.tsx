@@ -6,11 +6,11 @@ import { siteUrl } from "./lib/site";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Tradução de Documentos Brasil-Itália | TraducaoBrasilItalia",
+    default: "Tradução Juramentada Brasil ↔ Itália | Atendimento em Português",
     template: "%s | TraducaoBrasilItalia",
   },
   description:
-    "Tradução de documentos entre português e italiano para cidadania italiana, imigração, casamento, diplomas, certidões e uso oficial no Brasil e na Itália.",
+    "Tradução juramentada de qualquer documento — CNH, diplomas, certidões, cidadania. Aceita em toda a Itália. Orientação e orçamento rápido pelo WhatsApp.",
   keywords: [
     "tradução de documentos Brasil Itália",
     "tradução juramentada para italiano",
@@ -21,14 +21,20 @@ export const metadata: Metadata = {
     "tradução italiano português",
   ],
   openGraph: {
-    title: "Tradução de Documentos Brasil-Itália | TraducaoBrasilItalia",
+    title: "Tradução Juramentada Brasil ↔ Itália | Atendimento em Português",
     description:
-      "Atendimento em português para tradução de documentos, tradução juramentada, apostilamento e orientação documental entre Brasil e Itália.",
+      "Tradução juramentada de qualquer documento — CNH, diplomas, certidões, cidadania. Aceita em toda a Itália. Orientação e orçamento rápido pelo WhatsApp.",
     url: siteUrl,
     siteName: "TraducaoBrasilItalia",
     images: ["/assets/hero-professional-wide.png"],
     locale: "pt_BR",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tradução Juramentada Brasil ↔ Itália | Atendimento em Português",
+    description: "Tradução juramentada de qualquer documento — CNH, diplomas, certidões, cidadania. Aceita em toda a Itália. Orientação e orçamento rápido pelo WhatsApp.",
+    images: ["/assets/hero-professional-wide.png"],
   },
   robots: {
     index: true,

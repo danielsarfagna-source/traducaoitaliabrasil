@@ -1,7 +1,7 @@
-export const WHATSAPP_NUMBER = "353831000159";
+export const WHATSAPP_NUMBER = "393924605784";
 
 export const WHATSAPP_MESSAGE =
-  "Olá, vim pelo TraducaoBrasilItalia e gostaria de informações sobre a tradução do meu documento.";
+  "Oi! Vi seu site e queria saber sobre a tradução do meu documento 🙂";
 
 export const WHATSAPP_URL =
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
