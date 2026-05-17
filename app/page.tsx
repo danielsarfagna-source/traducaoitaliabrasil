@@ -91,6 +91,21 @@ const articles = [
     href: "/dichiarazione-di-valore-traducao-diploma",
     text: "Estudar ou exercer profissão na Itália com diploma do Brasil — o passo a passo da tradução juramentada e da Declaração de Valor.",
   },
+  {
+    title: "Reforma da cidadania italiana (Lei 74/2025): o que muda nos seus documentos",
+    href: "/reforma-cidadania-italiana-documentos",
+    text: "O que a nova lei e a decisão da Corte Constitucional significam na prática — e por que a tradução das suas certidões ficou ainda mais decisiva.",
+  },
+  {
+    title: "Tradução juramentada de certidão de nascimento, casamento e óbito",
+    href: "/traducao-juramentada-certidoes",
+    text: "Quando você precisa, como funciona e os erros que fazem o consumo recusar a sua certidão traduzida.",
+  },
+  {
+    title: "Documentos e traduções para o permesso di soggiorno",
+    href: "/documentos-traducao-permesso-di-soggiorno",
+    text: "Quais documentos brasileiros precisam de tradução juramentada para pedir e renovar o permesso na Itália.",
+  },
 ];
 
 function Hero() {
