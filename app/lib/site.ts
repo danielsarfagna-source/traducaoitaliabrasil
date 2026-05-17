@@ -19,6 +19,8 @@ export const routes = [
   "/traducao-juramentada-para-cidadania-italiana",
   "/traducao-juramentada-italiano",
   "/apostilar-documento-italiano-na-italia",
+  "/traducao-cnh-dirigir-na-italia",
+  "/dichiarazione-di-valore-traducao-diploma",
   "/faq",
   "/politica-de-privacidade",
   "/cookie-policy",

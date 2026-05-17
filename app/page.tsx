@@ -81,6 +81,16 @@ const articles = [
     href: "/apostilar-documento-italiano-na-italia",
     text: "Entenda quando a Apostila de Haia é necessária e como ela se relaciona com traduções oficiais.",
   },
+  {
+    title: "Tradução de CNH para dirigir na Itália: o que muda com o acordo Brasil–Itália",
+    href: "/traducao-cnh-dirigir-na-italia",
+    text: "CNH brasileira na Itália, conversão para a patente di guida e o papel da tradução juramentada — explicado de forma clara.",
+  },
+  {
+    title: "Dichiarazione di Valore: como traduzir e validar seu diploma brasileiro na Itália",
+    href: "/dichiarazione-di-valore-traducao-diploma",
+    text: "Estudar ou exercer profissão na Itália com diploma do Brasil — o passo a passo da tradução juramentada e da Declaração de Valor.",
+  },
 ];
 
 function Hero() {
