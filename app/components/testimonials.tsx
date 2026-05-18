@@ -5,13 +5,13 @@ const testimonials = [
     name: "Dayane Marques",
     rating: 5,
     text: "Tudo certo, pessoal excelente e educado.",
-    image: "/assets/testimonial-1.jpeg",
+    image: "/assets/testimonial-2.jpeg",
   },
   {
     name: "Ferdinando Gasperinne",
     rating: 5,
     text: "Tradução perfeita, tudo em ordem, tudo muito rápido e prestativo.",
-    image: "/assets/testimonial-2.jpeg",
+    image: "/assets/testimonial-1.jpeg",
   },
   {
     name: "Jefferson Toaldo",
