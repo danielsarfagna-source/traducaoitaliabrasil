@@ -67,7 +67,7 @@ export function SiteHeader() {
             alt="TRADUÇÃO JURAMENTADA — Português ↔ Italiano"
             width={192}
             height={128}
-            className="h-[68px] w-auto object-contain"
+            className="h-[80px] w-auto object-contain"
             priority
           />
         </Link>

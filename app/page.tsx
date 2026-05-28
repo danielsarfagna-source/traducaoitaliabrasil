@@ -142,7 +142,7 @@ function ProcessAndNeeds() {
           <h2 className="font-serif text-xl uppercase tracking-[0.08em] text-white">
             Para que você precisa?
           </h2>
-          <div className="mt-6 grid items-start gap-3 sm:grid-cols-2">
+          <div className="mt-6 grid gap-3">
             {needs.map((item) => (
               <div key={item} className="flex gap-3 text-white/88">
                 <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-[#d6a64f] text-xs font-black text-[#06111d]">
