@@ -60,7 +60,7 @@ export function SiteHeader() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#d8a84f]/25 bg-[#020817]/90 backdrop-blur-xl">
-      <div className="mx-auto flex h-24 max-w-[1480px] items-center justify-between px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto flex h-24 max-w-[1480px] items-end justify-between pb-2 px-5 sm:px-8 lg:px-12">
         <Link href="/" className="flex shrink-0 items-center transition hover:opacity-90" aria-label="TRADUÇÃO JURAMENTADA">
           <Image
             src="/assets/logo-premium.png"
