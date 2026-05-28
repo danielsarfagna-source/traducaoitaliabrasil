@@ -13,12 +13,15 @@
   --mute:      #8b909c;
 
   position: relative;
-  min-height: 90svh;    /* ~10svh da próxima seção espia na base = sinaliza scroll */
+  /* Regra 1: 100svh = viewport real (exclui barra do browser); mídia preenche exato */
+  min-height: 100svh;
   display: flex;
-  align-items: center;
+  flex-direction: column;  /* Regra 4 */
+  justify-content: center;
+  align-items: flex-start;
   background: var(--ink);
   overflow: hidden;
-  isolation: isolate;   /* contém mix-blend-mode dos filhos */
+  isolation: isolate;
 }
 
 /* Poster, vídeo e frame final: fundo inteiro */
@@ -95,10 +98,9 @@
   position: relative;
   z-index: 5;
   margin-left: clamp(32px, 7%, 112px);
-  margin-top: 2.5rem;  /* desloca o bloco para baixo: equilibra espaço visível acima/abaixo */
-  padding: 9.5rem 3rem 4rem;
+  /* Regras 3+5: padding-top limpa o header fixo (~130px) + safe-area iOS/Android */
+  padding: max(140px, calc(env(safe-area-inset-top) + 130px)) 3rem 4rem;
   max-width: 1100px;
-  align-self: center;
 }
 
 .hero__tag {
@@ -237,13 +239,14 @@
   }
 
   .hero {
-    align-items: flex-end; /* conteúdo ancora na base */
+    /* Regra 4: flex-start no mobile — padding-top da .hero__content garante clearance */
+    justify-content: flex-start;
   }
 
   .hero__content {
-    padding: 0 20px 44px;
+    /* Regra 3: max() protege contra header+notch em qualquer device */
+    padding: max(160px, calc(env(safe-area-inset-top) + 130px)) 20px 48px;
     margin-left: 0;
-    margin-top: 0;        /* reseta margin-top desktop */
     max-width: none;
     text-align: center;
   }
