@@ -65,9 +65,9 @@ export function SiteHeader() {
           <Image
             src="/assets/logo-premium.png"
             alt="TRADUÇÃO JURAMENTADA — Português ↔ Italiano"
-            width={192}
-            height={128}
-            className="h-[80px] w-auto object-contain"
+            width={384}
+            height={145}
+            className="h-[72px] w-auto object-contain"
             priority
           />
         </Link>
