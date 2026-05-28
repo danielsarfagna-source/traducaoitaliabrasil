@@ -6,7 +6,7 @@ export const faqItems = [
   ["Posso pagar com PIX?", "Sim. O serviço pode aceitar PIX, além de pagamento em euro e reais."],
   ["Quanto tempo demora?", "Depende do documento, mas muitos casos podem ser analisados e encaminhados em 24 a 48 horas."],
   ["Posso enviar documento pelo WhatsApp?", "Sim. O cliente pode enviar foto ou PDF para análise inicial e orçamento."],
-  ["Vocês fazem tradução italiano → português?", "Sim. Fazemos tradução normal italiano → português. A tradução juramentada é oferecida para português → italiano."],
+  ["Vocês traduzem documentos italianos para uso no Brasil?", "Sim. Traduzimos documentos italianos para uso em procedimentos no Brasil. A tradução juramentada oficial é para português → italiano."],
   ["Vocês atendem documentos para casamento e divórcio?", "Sim. Certidões e documentos civis podem ser analisados para tradução e eventual apostilamento."],
   ["O orçamento é gratuito?", "Sim, a análise inicial para orçamento pode ser feita pelo WhatsApp."],
   ["Preciso apostilar meus documentos?", "Pode ser necessário. A Apostila de Haia é usada para reconhecimento internacional de documentos."],
@@ -14,14 +14,14 @@ export const faqItems = [
 ] as const;
 
 export const serviceCards = [
-  ["Tradução juramentada português → italiano", "Para documentos brasileiros que serão utilizados na Itália."],
-  ["Tradução italiano → português", "Para documentos italianos que serão utilizados no Brasil ou em outros procedimentos."],
-  ["Tradução de CNH", "Tradução oficial da Carteira Nacional de Habilitação para uso na Itália."],
-  ["Tradução de diplomas, históricos e documentos escolares", "Documentos acadêmicos para estudo, reconhecimento de títulos e processos profissionais."],
-  ["Tradução de certidões", "Nascimento, casamento, óbito, divórcio e demais documentos do registro civil."],
+  ["Tradução juramentada para a Itália", "Para documentos brasileiros que serão utilizados em processos oficiais na Itália."],
+  ["Tradução juramentada de CNH", "Tradução juramentada da Carteira Nacional de Habilitação — aceita em toda a Itália."],
+  ["Tradução juramentada de certidões", "Nascimento, casamento, óbito, divórcio e demais documentos do registro civil."],
+  ["Tradução juramentada para cidadania italiana", "Certidões, documentos civis, processos administrativos e documentação complementar."],
+  ["Tradução juramentada de diplomas e documentos escolares", "Documentos acadêmicos para estudo, reconhecimento de títulos e processos profissionais."],
   ["Tradução para permesso di soggiorno", "Documentos para imigração, residência e procedimentos administrativos na Itália."],
-  ["Tradução para cidadania italiana", "Certidões, documentos civis, processos administrativos e documentação complementar."],
   ["Procurações e documentos diversos", "Documentos de empresa, procurações, contratos e textos jurídicos."],
-  ["Documentos italianos para uso no Brasil", "Certidões italianas, documentos administrativos e documentos emitidos por autoridade italiana."],
+  ["Documentos italianos para o Brasil", "Certidões italianas, documentos administrativos e documentos emitidos por autoridade italiana."],
   ["Apostilamento (Apostila de Haia)", "Orientação e suporte para Apostila de Haia quando necessária para uso internacional."],
+  ["Tradução de documentos escolares e acadêmicos", "Históricos, diplomas e documentos para validação e reconhecimento de estudos."],
 ] as const;

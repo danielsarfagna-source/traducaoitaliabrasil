@@ -5,6 +5,44 @@ import Link from "next/link";
 import { useState } from "react";
 import { whatsappHref } from "../lib/site";
 
+const marqueeItems = [
+  "Melhor preço do mercado",
+  "Atendimento em português",
+  "Responsabilidade com seus objetivos",
+];
+
+function AnnouncementBar() {
+  const sep = (
+    <span aria-hidden="true" className="mx-5 text-[#c99a45]/50 select-none">•</span>
+  );
+  const chunk = (
+    <>
+      {marqueeItems.map((text, i) => (
+        <span key={i} className="shrink-0 whitespace-nowrap text-[#c99a45]/80 font-medium text-[11px] tracking-[0.18em] uppercase">
+          {text}{sep}
+        </span>
+      ))}
+    </>
+  );
+  return (
+    <div
+      className="group overflow-hidden border-b border-[#c99a45]/18 bg-[#040d18] py-[7px]"
+      aria-label="Destaques do serviço"
+    >
+      {/* Versão acessível: texto estático visível apenas para leitores de tela */}
+      <p className="sr-only">{marqueeItems.join(' · ')}</p>
+      <div
+        className="flex w-max animate-marquee group-hover:[animation-play-state:paused]"
+        aria-hidden="true"
+      >
+        {/* Duplicar o conteúdo para loop sem salto */}
+        <span className="flex">{chunk}</span>
+        <span className="flex">{chunk}</span>
+      </div>
+    </div>
+  );
+}
+
 const navItems = [
   ["Início", "/#inicio"],
   ["Serviços", "/servicos"],
@@ -64,6 +102,7 @@ export function SiteHeader() {
           </nav>
         </div>
       ) : null}
+      <AnnouncementBar />
     </header>
   );
 }

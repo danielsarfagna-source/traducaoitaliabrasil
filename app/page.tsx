@@ -1,14 +1,13 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { CTASection } from "./components/cta-section";
 import { FAQAccordion } from "./components/faq-accordion";
 import { Footer } from "./components/footer";
+import { HeroVideo } from "./components/hero-video";
 import { SectionTitle } from "./components/section-title";
 import { ServiceCard } from "./components/service-card";
 import { SiteHeader } from "./components/site-header";
 import { Testimonials } from "./components/testimonials";
-import { TrustCard } from "./components/trust-card";
 import { WhatsAppButton } from "./components/whatsapp-button";
 import { faqItems, serviceCards } from "./lib/content";
 import { siteUrl } from "./lib/site";
@@ -22,14 +21,6 @@ export const metadata: Metadata = {
   },
 };
 
-const benefits = [
-  ["✓", "Atendimento em português"],
-  ["◷", "Rápido (24–48h)"],
-  ["◆", "Aceitamos PIX"],
-  ["€", "Pagamento em euro e em reais"],
-];
-
-
 const serviceBar = [
   ["▧", "Tradução juramentada"],
   ["♙", "Apostilamento (Apostila de Haia)"],
@@ -40,7 +31,7 @@ const serviceBar = [
 
 const steps = [
   ["Você envia no WhatsApp", "Foto ou PDF do documento."],
-  ["Eu traduzo em italiano ou português", "Tradução precisa para finalidade oficial."],
+  ["Traduzo com validade juramentada", "Tradução juramentada precisa para finalidade oficial."],
   ["Fazemos o apostilamento, quando necessário", "Orientação sobre Apostila de Haia."],
   ["Você recebe pronto para usar", "Entrega digital e/ou física."],
 ];
@@ -108,80 +99,6 @@ const articles = [
   },
 ];
 
-function Hero() {
-  return (
-    <section id="inicio" className="relative overflow-hidden border-b border-[#d8a84f]/24 bg-[#020817] pt-20">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_23%,rgba(216,168,79,0.20),transparent_25%),radial-gradient(circle_at_14%_72%,rgba(55,87,129,0.18),transparent_34%),linear-gradient(112deg,#020817_0%,#07111f_50%,#0b1628_100%)]" />
-      <div className="absolute inset-y-20 right-0 hidden w-[66vw] lg:block">
-        <Image
-          src="/assets/hero-professional-wide.png"
-          alt="Tradução juramentada oficial entre Brasil e Itália"
-          fill
-          priority
-          sizes="66vw"
-          className="object-cover object-[50%_50%] opacity-96 [mask-image:linear-gradient(90deg,transparent_0%,rgba(0,0,0,0.18)_8%,black_27%,black_100%)]"
-        />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#020817_0%,rgba(2,8,23,0.86)_12%,rgba(2,8,23,0.40)_31%,rgba(2,8,23,0.06)_60%,rgba(2,8,23,0.30)_100%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_66%_30%,rgba(216,168,79,0.10),transparent_28%),linear-gradient(180deg,rgba(2,8,23,0.12)_0%,transparent_48%,rgba(2,8,23,0.56)_100%)]" />
-      </div>
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,8,23,0.99)_0%,rgba(2,8,23,0.92)_36%,rgba(2,8,23,0.30)_72%,rgba(2,8,23,0.68)_100%)] lg:bg-[linear-gradient(90deg,rgba(2,8,23,0.99)_0%,rgba(2,8,23,0.94)_33%,rgba(2,8,23,0.56)_48%,rgba(2,8,23,0.14)_74%,rgba(2,8,23,0.38)_100%)]" />
-      <div className="absolute left-1/2 top-20 hidden h-[620px] w-[720px] -translate-x-10 rounded-full border border-[#d8a84f]/10 bg-[#d8a84f]/[0.025] blur-3xl lg:block" />
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#020817] to-transparent" />
-
-      <div className="relative mx-auto grid min-h-[760px] max-w-[1480px] grid-cols-1 gap-10 px-5 pb-12 pt-14 sm:px-8 lg:grid-cols-[0.86fr_0.9fr] lg:items-end lg:px-12">
-        <div className="max-w-[690px] pb-2 lg:pb-20">
-          <p className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#e2ae58]">
-            <span className="h-px w-8 bg-[#d8a84f]" />
-            Atendimento em português · Rápido (24–48h) · Aceitamos PIX
-          </p>
-          <h1 className="font-serif text-[3.05rem] leading-[0.96] tracking-normal text-[#f8f5ee] sm:text-[4.65rem] lg:text-[5.15rem]">
-            Seu documento traduzido certo
-            <span className="block text-[0.6em] mt-4 opacity-90">— sem retrabalho, sem perder prazo.</span>
-          </h1>
-          <p className="mt-6 max-w-[640px] text-lg leading-8 text-[#f8f5ee]/86 sm:text-xl">
-            Tradução juramentada português ↔ italiano de qualquer documento — CNH, diplomas, certidões, permesso di soggiorno, cidadania e mais. Aceita em toda a Itália. Atendimento de brasileiro para brasileiro, do primeiro documento até a entrega.
-          </p>
-
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {benefits.map(([icon, label]) => (
-              <div key={label} className="flex items-center gap-3 border-[#d8a84f]/24 sm:border-r sm:pr-4 last:border-r-0">
-                <span className="grid size-11 shrink-0 place-items-center text-3xl text-[#d8a84f]">{icon}</span>
-                <span className="text-sm leading-5 text-[#f8f5ee]/90">{label}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <WhatsAppButton className="group flex min-h-20 items-center gap-4 rounded-[8px] bg-[linear-gradient(135deg,#f3cf80,#d8a84f_48%,#ad711f)] px-8 text-[#020817] shadow-[0_18px_48px_rgba(216,168,79,0.30)] transition hover:translate-y-[-1px]">
-              <span className="text-4xl">☏</span>
-              <span>
-                <span className="block text-lg font-black uppercase tracking-[0.04em]">Enviar meu documento agora</span>
-                <span className="mt-0.5 block text-sm opacity-90">Resposta no WhatsApp em poucos minutos.</span>
-              </span>
-            </WhatsAppButton>
-          </div>
-        </div>
-
-        <div className="relative flex flex-col items-start pb-0 lg:items-end lg:pb-20">
-          <div className="relative h-[430px] w-full overflow-hidden rounded-[8px] sm:h-[520px] lg:hidden">
-            <Image
-              src="/assets/hero-professional-wide.png"
-              alt="Tradução juramentada oficial"
-              fill
-              priority
-              sizes="100vw"
-              className="object-cover object-center"
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,8,23,0.48),transparent_46%),linear-gradient(180deg,transparent_50%,rgba(2,8,23,0.72))]" />
-          </div>
-
-          <TrustCard />
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function ServiceBar() {
   return (
     <section className="border-y border-[#c99a45]/25 bg-[#03101c]">
@@ -245,8 +162,8 @@ function ServicesSection() {
   return (
     <section id="servicos" className="bg-[#020817] px-5 py-20 sm:px-8 lg:px-12">
       <div className="mx-auto max-w-[1480px]">
-        <SectionTitle eyebrow="Serviços" title="Traduções e suporte documental" text="Atendimento para documentos brasileiros e italianos usados em processos oficiais entre Brasil, Itália e exterior." />
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <SectionTitle eyebrow="Serviços" title="Tradução juramentada e suporte documental" text="Tradução juramentada para documentos brasileiros usados em processos oficiais na Itália — CNH, certidões, diplomas, cidadania e mais." />
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {serviceCards.map(([title, text]) => (
             <ServiceCard key={title} title={title} text={text} />
           ))}
@@ -282,9 +199,9 @@ function AboutPreview() {
   return (
     <section className="bg-[#020817] px-5 py-20 sm:px-8 lg:px-12">
       <div className="mx-auto grid max-w-[1180px] gap-8 rounded-[8px] border border-[#d8a84f]/34 bg-[#07111f]/72 p-8 md:grid-cols-[0.8fr_1.2fr] md:p-10">
-        <SectionTitle align="left" eyebrow="Quem somos" title="Especialistas em documentos Brasil ↔ Itália" />
+        <SectionTitle align="left" eyebrow="Quem somos" title="Especialistas em tradução juramentada Brasil ↔ Itália" />
         <div className="space-y-5 text-lg leading-8 text-[#f8f5ee]/76">
-          <p>Somos um serviço especializado em tradução juramentada português → italiano, tradução italiano → português e orientação documental para brasileiros na Itália, brasileiros no Brasil e pessoas que precisam usar documentos entre Brasil, Itália e exterior.</p>
+          <p>Somos um serviço especializado em tradução juramentada para a Itália — e orientação documental para brasileiros na Itália, brasileiros no Brasil e pessoas que precisam usar documentos entre Brasil, Itália e exterior.</p>
           <p>Nosso foco é oferecer um atendimento claro, rápido e seguro, evitando que o cliente perca tempo com exigências incorretas, documentos incompletos ou traduções inadequadas para a finalidade desejada.</p>
           <Link href="/quem-somos" className="inline-block text-sm font-bold uppercase tracking-[0.12em] text-[#d8a84f]">Conhecer o serviço</Link>
         </div>
@@ -360,7 +277,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#020912] text-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <SiteHeader />
-      <Hero />
+      <HeroVideo />
       <Testimonials />
       <ServiceBar />
       <ProcessAndNeeds />
