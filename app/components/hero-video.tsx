@@ -180,7 +180,7 @@ export function HeroVideo() {
         </span>
 
         <h1 className="hero__title">
-          Seu documento com validade <em>juramentada</em>
+          Seu documento traduzido <em>certo</em>
           <span className="hero__title-sub">— sem retrabalho, sem perder prazo.</span>
         </h1>
 
