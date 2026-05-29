@@ -63,11 +63,11 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-[1480px] items-center justify-between px-5 sm:px-8 lg:h-20 lg:px-12">
         <Link href="/" className="flex shrink-0 items-center transition hover:opacity-90" aria-label="TRADUÇÃO JURAMENTADA">
           <Image
-            src="/assets/logo-premium.png"
+            src="/logo-header.png"
             alt="TRADUÇÃO JURAMENTADA — Português ↔ Italiano"
-            width={384}
-            height={145}
-            className="h-8 w-auto object-contain lg:h-11"
+            width={588}
+            height={197}
+            className="h-10 w-auto object-contain lg:h-14"
             priority
           />
         </Link>
