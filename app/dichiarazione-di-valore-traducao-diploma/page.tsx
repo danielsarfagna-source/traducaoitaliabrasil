@@ -325,22 +325,3 @@ export default function Page() {
     </main>
   );
 }
-
-function SiteHeader() {
-  return (
-    <header className="fixed top-0 left-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
-      <div className="mx-auto max-w-[1400px] px-5 h-24 flex items-center justify-between">
-        <Link href="/" className="font-serif text-2xl font-bold text-[#0a1a2f]">
-          Tradução Brasil Itália
-        </Link>
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-bold uppercase tracking-widest text-slate-600">
-          <Link href="/servicos" className="hover:text-blue-500">Serviços</Link>
-          <Link href="/faq" className="hover:text-blue-500">FAQ</Link>
-          <WhatsAppButton className="bg-[#0a1a2f] text-white px-6 py-3 rounded-full text-xs">
-            Contato
-          </WhatsAppButton>
-        </nav>
-      </div>
-    </header>
-  );
-}
