@@ -352,6 +352,14 @@ export default function Page() {
         </div>
       </div>
 
+      <section className="mx-auto max-w-[1400px] px-5 pb-24 sm:px-8 lg:px-12">
+        <h2 className="font-serif text-3xl text-[#0a1a2f]">Veja também</h2>
+        <ul className="mt-6 flex flex-col gap-4">
+          <li><Link href="/traducao-cnh-brasileira-italia" className="text-lg text-[#d8a84f] underline hover:text-[#0a1a2f] transition-colors">Tradução da CNH brasileira na Itália</Link></li>
+          <li><Link href="/traducao-documentos-permesso-di-soggiorno" className="text-lg text-[#d8a84f] underline hover:text-[#0a1a2f] transition-colors">Tradução de documentos brasileiros para permesso di soggiorno</Link></li>
+        </ul>
+      </section>
+
       <Footer />
     </main>
   );

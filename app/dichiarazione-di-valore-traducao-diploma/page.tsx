@@ -321,6 +321,15 @@ export default function Page() {
         </div>
       </div>
 
+      <section className="mx-auto max-w-[1400px] px-5 pb-24 sm:px-8 lg:px-12">
+        <h2 className="font-serif text-3xl text-[#0a1a2f]">Veja também</h2>
+        <ul className="mt-6 flex flex-col gap-4">
+          <li><Link href="/traducao-juramentada-diploma-brasileiro-italia" className="text-lg text-blue-500 underline hover:text-[#0a1a2f] transition-colors">Tradução juramentada de diploma brasileiro para Itália</Link></li>
+          <li><Link href="/traducao-historico-escolar-italia" className="text-lg text-blue-500 underline hover:text-[#0a1a2f] transition-colors">Tradução juramentada de histórico escolar brasileiro para Itália</Link></li>
+          <li><Link href="/apostila-haia-traducao-juramentada-italia" className="text-lg text-blue-500 underline hover:text-[#0a1a2f] transition-colors">Apostila de Haia e tradução juramentada para Itália</Link></li>
+        </ul>
+      </section>
+
       <Footer />
     </main>
   );

@@ -3,6 +3,8 @@ import { Footer } from "./footer";
 import { SiteHeader } from "./site-header";
 import { WhatsAppButton } from "./whatsapp-button";
 import { siteUrl } from "../lib/site";
+import React from "react";
+import Link from "next/link";
 
 type FAQ = {
   question: string;
@@ -12,16 +14,17 @@ type FAQ = {
 type ArticlePageProps = {
   eyebrow: string;
   title: string;
-  intro: string;
+  intro: string | React.ReactNode;
   sections: {
     title: string;
-    body: string[];
-    list?: string[];
+    body: (string | React.ReactNode)[];
+    list?: (string | React.ReactNode)[];
   }[];
   faqs: FAQ[];
+  relatedLinks?: { title: string; href: string }[];
 };
 
-export function ArticlePage({ eyebrow, title, intro, sections, faqs }: ArticlePageProps) {
+export function ArticlePage({ eyebrow, title, intro, sections, faqs, relatedLinks }: ArticlePageProps) {
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -65,15 +68,15 @@ export function ArticlePage({ eyebrow, title, intro, sections, faqs }: ArticlePa
             {sections.map((section) => (
               <section key={section.title} className="border-b border-[#c99a45]/18 py-8 first:pt-0 last:border-b-0 last:pb-0">
                 <h2 className="font-serif text-3xl text-white">{section.title}</h2>
-                {section.body.map((paragraph) => (
-                  <p key={paragraph} className="mt-5 text-lg leading-8 text-white/76">
+                {section.body.map((paragraph, i) => (
+                  <div key={i} className="mt-5 text-lg leading-8 text-white/76">
                     {paragraph}
-                  </p>
+                  </div>
                 ))}
                 {section.list ? (
                   <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                    {section.list.map((item) => (
-                      <li key={item} className="flex gap-3 text-white/84">
+                    {section.list.map((item, i) => (
+                      <li key={i} className="flex gap-3 text-white/84">
                         <span className="mt-1 grid size-5 shrink-0 place-items-center rounded-full bg-[#d6a64f] text-xs font-black text-[#06111d]">
                           ✓
                         </span>
@@ -85,12 +88,29 @@ export function ArticlePage({ eyebrow, title, intro, sections, faqs }: ArticlePa
               </section>
             ))}
 
-            <section className="pt-10">
-              <h2 className="font-serif text-3xl text-white">FAQ</h2>
-              <div className="mt-6">
-                <FAQAccordion items={faqs.map((faq) => [faq.question, faq.answer] as const)} />
-              </div>
-            </section>
+            {faqs && faqs.length > 0 && (
+              <section className="pt-10">
+                <h2 className="font-serif text-3xl text-white">FAQ</h2>
+                <div className="mt-6">
+                  <FAQAccordion items={faqs.map((faq) => [faq.question, faq.answer] as const)} />
+                </div>
+              </section>
+            )}
+
+            {relatedLinks && relatedLinks.length > 0 && (
+              <section className="pt-10 border-t border-[#c99a45]/18 mt-10">
+                <h2 className="font-serif text-3xl text-white">Veja também</h2>
+                <ul className="mt-6 flex flex-col gap-4">
+                  {relatedLinks.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href} className="text-lg text-[#d9aa52] underline hover:text-white transition-colors">
+                        {link.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
           </article>
 
           <aside className="h-fit rounded-[8px] border border-[#c99a45]/50 bg-[#06111d] p-6 lg:sticky lg:top-28">

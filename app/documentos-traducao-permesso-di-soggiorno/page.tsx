@@ -74,6 +74,10 @@ export default function Page() {
           answer: "Sim — orientamos antes para você não pagar por tradução que não seria exigida.",
         },
       ]}
+      relatedLinks={[
+        { title: "Tradução de documentos brasileiros para permesso di soggiorno", href: "/traducao-documentos-permesso-di-soggiorno" },
+        { title: "Tradução juramentada de certidões", href: "/traducao-juramentada-certidoes" }
+      ]}
     />
   );
 }

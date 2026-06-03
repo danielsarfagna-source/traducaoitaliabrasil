@@ -477,6 +477,16 @@ export default function Page() {
         </div>
       </div>
 
+      <section className="mx-auto max-w-[1400px] px-5 pb-24 sm:px-8 lg:px-12">
+        <h2 className="font-serif text-3xl text-[#0a1a2f]">Veja também</h2>
+        <ul className="mt-6 flex flex-col gap-4">
+          <li><Link href="/traducao-juramentada-certidao-nascimento-italia" className="text-lg text-[#d8a84f] underline hover:text-[#0a1a2f] transition-colors">Tradução juramentada de certidão de nascimento para Itália</Link></li>
+          <li><Link href="/traducao-juramentada-certidao-casamento-obito-italia" className="text-lg text-[#d8a84f] underline hover:text-[#0a1a2f] transition-colors">Tradução juramentada de certidão de casamento e óbito para Itália</Link></li>
+          <li><Link href="/apostila-haia-traducao-juramentada-italia" className="text-lg text-[#d8a84f] underline hover:text-[#0a1a2f] transition-colors">Apostila de Haia e tradução juramentada para Itália</Link></li>
+          <li><Link href="/reforma-cidadania-italiana-documentos" className="text-lg text-[#d8a84f] underline hover:text-[#0a1a2f] transition-colors">Reforma da cidadania italiana (Lei 74/2025)</Link></li>
+        </ul>
+      </section>
+
       <Footer />
     </main>
   );

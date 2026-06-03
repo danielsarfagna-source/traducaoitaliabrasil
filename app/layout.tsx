@@ -57,9 +57,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Tradução Brasil Itália",
+    url: siteUrl,
+    logo: `${siteUrl}/icon-512.png`,
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+39-320-800-3406",
+      contactType: "customer service",
+      availableLanguage: ["Portuguese", "Italian"]
+    },
+    sameAs: [
+      siteUrl
+    ]
+  };
+
   return (
     <html lang="pt-BR">
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
         {children}
         <CookieBanner />
       </body>

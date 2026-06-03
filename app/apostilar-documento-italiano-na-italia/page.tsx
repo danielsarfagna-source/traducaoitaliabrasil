@@ -78,6 +78,10 @@ export default function Page() {
             "Sim. O atendimento pode orientar documentos em toda a Itália e também situações envolvendo uso no Brasil ou exterior.",
         },
       ]}
+      relatedLinks={[
+        { title: "Tradução juramentada para cidadania italiana", href: "/traducao-juramentada-para-cidadania-italiana" },
+        { title: "Apostila de Haia e tradução juramentada", href: "/apostila-haia-traducao-juramentada-italia" }
+      ]}
     />
   );
 }

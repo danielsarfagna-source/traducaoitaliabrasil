@@ -74,6 +74,11 @@ export default function Page() {
           answer: "Depende do volume; você recebe o prazo fechado junto com o orçamento.",
         },
       ]}
+      relatedLinks={[
+        { title: "Tradução juramentada de certidão de nascimento para Itália", href: "/traducao-juramentada-certidao-nascimento-italia" },
+        { title: "Tradução juramentada de certidão de casamento e óbito para Itália", href: "/traducao-juramentada-certidao-casamento-obito-italia" },
+        { title: "Tradução juramentada para cidadania italiana", href: "/traducao-juramentada-para-cidadania-italiana" }
+      ]}
     />
   );
 }

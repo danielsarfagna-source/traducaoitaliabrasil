@@ -83,6 +83,11 @@ export default function Page() {
             "O prazo depende do volume e da complexidade, mas documentos comuns podem ser tratados com rapidez, muitas vezes em 24 a 48 horas após a análise.",
         },
       ]}
+      relatedLinks={[
+        { title: "Traduzione giurata portoghese italiano a Roma", href: "/traduzione-giurata-portoghese-italiano-roma" },
+        { title: "Traduzione asseverata portoghese italiano", href: "/traduzione-asseverata-portoghese-italiano" },
+        { title: "Tradução juramentada de documentos brasileiros na Itália", href: "/traducao-documentos-brasileiros-na-italia" }
+      ]}
     />
   );
 }

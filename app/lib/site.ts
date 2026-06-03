@@ -28,4 +28,14 @@ export const routes = [
   "/politica-de-privacidade",
   "/cookie-policy",
   "/termos-de-uso",
+  "/traduzione-giurata-portoghese-italiano-roma",
+  "/traduzione-asseverata-portoghese-italiano",
+  "/traducao-juramentada-certidao-nascimento-italia",
+  "/traducao-juramentada-certidao-casamento-obito-italia",
+  "/traducao-juramentada-diploma-brasileiro-italia",
+  "/traducao-historico-escolar-italia",
+  "/traducao-cnh-brasileira-italia",
+  "/traducao-documentos-permesso-di-soggiorno",
+  "/apostila-haia-traducao-juramentada-italia",
+  "/traducao-documentos-brasileiros-na-italia"
 ];

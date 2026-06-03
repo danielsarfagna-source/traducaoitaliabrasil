@@ -67,6 +67,11 @@ export default function Page() {
           answer: "Em regra saiu do automatismo administrativo; restam discussões judiciais caso a caso.",
         },
       ]}
+      relatedLinks={[
+        { title: "Tradução juramentada para cidadania italiana", href: "/traducao-juramentada-para-cidadania-italiana" },
+        { title: "Tradução juramentada de certidões", href: "/traducao-juramentada-certidoes" },
+        { title: "Apostila de Haia e tradução", href: "/apostila-haia-traducao-juramentada-italia" }
+      ]}
     />
   );
 }
