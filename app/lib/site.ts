@@ -37,5 +37,10 @@ export const routes = [
   "/traducao-cnh-brasileira-italia",
   "/traducao-documentos-permesso-di-soggiorno",
   "/apostila-haia-traducao-juramentada-italia",
-  "/traducao-documentos-brasileiros-na-italia"
+  "/traducao-documentos-brasileiros-na-italia",
+  "/traducao-sentenca-divorcio-italia",
+  "/traducao-documentos-casamento-italia",
+  "/traducao-antecedentes-criminais-italia",
+  "/traducao-documentos-medicos-italia",
+  "/traducao-contratos-imoveis-italia"
 ];

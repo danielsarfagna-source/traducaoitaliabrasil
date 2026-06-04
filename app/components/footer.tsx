@@ -6,7 +6,7 @@ import { whatsappHref } from "../lib/site";
 export function Footer() {
   return (
     <footer className="border-t border-[#d8a84f]/22 bg-[#020817] px-5 py-12 text-[#f8f5ee]/72 sm:px-8 lg:px-12">
-      <div className="mx-auto grid max-w-[1480px] gap-10 md:grid-cols-2 lg:grid-cols-[1.15fr_0.75fr_0.85fr_0.65fr]">
+      <div className="mx-auto grid max-w-[1480px] gap-10 md:grid-cols-2 lg:grid-cols-[1.15fr_0.75fr_0.75fr_0.85fr_0.65fr]">
         <div>
           <h2 className="font-serif text-2xl text-[#f8f5ee]">TRADUÇÃO JURAMENTADA</h2>
           <p className="mt-3 max-w-xl leading-7">
@@ -28,11 +28,22 @@ export function Footer() {
           </nav>
         </div>
         <div>
+          <h3 className="font-serif text-xl text-[#f8f5ee]">Especializados</h3>
+          <nav className="mt-4 grid gap-2">
+            <Link href="/traducao-sentenca-divorcio-italia">Divórcio na Itália</Link>
+            <Link href="/traducao-documentos-casamento-italia">Casamento (Nulla Osta)</Link>
+            <Link href="/traducao-antecedentes-criminais-italia">Antecedentes Criminais</Link>
+            <Link href="/traducao-documentos-medicos-italia">Médicos e Saúde</Link>
+            <Link href="/traducao-contratos-imoveis-italia">Imóveis e Negócios</Link>
+          </nav>
+        </div>
+        <div>
           <h3 className="font-serif text-xl text-[#f8f5ee]">Guias úteis</h3>
           <nav className="mt-4 grid gap-2">
             <Link href="/traducao-juramentada-para-cidadania-italiana">Tradução para cidadania italiana</Link>
             <Link href="/traducao-juramentada-italiano">Tradução português italiano</Link>
             <Link href="/apostilar-documento-italiano-na-italia">Apostila de Haia na Itália</Link>
+            <Link href="/traducao-cnh-dirigir-na-italia">CNH na Itália</Link>
           </nav>
         </div>
         <div>
