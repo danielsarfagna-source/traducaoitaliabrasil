@@ -74,11 +74,24 @@ export default function RootLayout({
       siteUrl
     ]
   };
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Tradução Brasil Itália",
+    url: siteUrl,
+    inLanguage: "pt-BR",
+    publisher: {
+      "@type": "Organization",
+      name: "Tradução Brasil Itália",
+      url: siteUrl,
+    },
+  };
 
   return (
     <html lang="pt-BR">
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
         {children}
         <CookieBanner />
       </body>

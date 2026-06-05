@@ -35,7 +35,7 @@ export default function Page() {
           "2. Apostilar o documento original em um cartório brasileiro.",
           "3. Enviar o documento apostilado para o Tradutor Juramentado. (Ele traduzirá o documento E a apostila).",
           "4. Apostilar a própria Tradução Juramentada.",
-          <span key="link">Este é o chamado <strong>'Apostilamento Duplo'</strong>, muito comum em processos abordados no nosso <Link href="/traducao-juramentada-para-cidadania-italiana" className="text-[#d9aa52] underline hover:text-white transition-colors">guia de cidadania italiana</Link>.</span>
+          <span key="link">Este é o chamado <strong>Apostilamento Duplo</strong>, muito comum em processos abordados no nosso <Link href="/traducao-juramentada-para-cidadania-italiana" className="text-[#d9aa52] underline hover:text-white transition-colors">guia de cidadania italiana</Link>.</span>
         ]
       },
       {

@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable react-hooks/set-state-in-effect, @typescript-eslint/no-unused-expressions */
 import { useEffect, useRef, useState } from 'react';
 import './hero.css';
 

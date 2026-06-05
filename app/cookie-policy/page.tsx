@@ -27,7 +27,7 @@ export default function Page() {
         <h2>5. Cookies de terceiros</h2>
         <p>Alguns serviços externos podem utilizar cookies próprios, como ferramentas de análise, mapas, vídeos incorporados ou plataformas de publicidade. Quando aplicável, esses cookies serão ativados apenas conforme a preferência do usuário.</p>
         <h2>6. Contato</h2>
-        <p>Para dúvidas sobre cookies: [E-MAIL DE CONTATO]</p>
+        <p>Para dúvidas sobre cookies, utilize o canal de atendimento informado no site.</p>
       </TextContent>
     </PageShell>
   );

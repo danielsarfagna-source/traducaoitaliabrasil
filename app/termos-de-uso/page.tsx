@@ -20,7 +20,7 @@ export default function Page() {
         <h2>7. Limitação de responsabilidade</h2><p>O serviço não se responsabiliza por exigências posteriores de órgãos terceiros quando tais exigências não foram informadas previamente pelo cliente ou dependem de critérios próprios da autoridade destinatária.</p>
         <h2>8. Pagamento</h2><p>O pagamento poderá ser feito conforme meios informados no atendimento, incluindo pagamento em euro, reais ou PIX, quando disponível.</p>
         <h2>9. Alterações</h2><p>Estes termos podem ser atualizados periodicamente.</p>
-        <h2>10. Contato</h2><p>Dúvidas podem ser enviadas para: [E-MAIL DE CONTATO]</p>
+        <h2>10. Contato</h2><p>Dúvidas podem ser enviadas pelo canal de atendimento informado no site.</p>
       </TextContent>
     </PageShell>
   );

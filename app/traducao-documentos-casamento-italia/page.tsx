@@ -47,9 +47,9 @@ export default function Page() {
         ]
       },
       {
-        title: "Prazos Fatais",
+        title: "Prazos e validade dos documentos",
         body: [
-          "As autoridades italianas exigem que as certidões brasileiras tenham sido emitidas há menos de 6 meses. Documentos fora desse prazo são rejeitados, obrigando o casal a refazer todo o processo de emissão, apostila e tradução."
+          "Muitos procedimentos de casamento pedem certidões recentes, e alguns órgãos trabalham com prazo de até 6 meses. Confirme a exigência do Comune ou consulado antes de emitir, apostilar e traduzir."
         ]
       }
     ]}

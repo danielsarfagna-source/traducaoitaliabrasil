@@ -15,6 +15,10 @@ type ArticlePageProps = {
   eyebrow: string;
   title: string;
   intro: string | React.ReactNode;
+  pagePath?: string;
+  description?: string;
+  schemaType?: "Service" | "Article" | "ProfessionalService";
+  areaServed?: string;
   sections: {
     title: string;
     body: (string | React.ReactNode)[];
@@ -24,7 +28,19 @@ type ArticlePageProps = {
   relatedLinks?: { title: string; href: string }[];
 };
 
-export function ArticlePage({ eyebrow, title, intro, sections, faqs, relatedLinks }: ArticlePageProps) {
+export function ArticlePage({
+  eyebrow,
+  title,
+  intro,
+  pagePath,
+  description,
+  schemaType,
+  areaServed = "Itália",
+  sections,
+  faqs,
+  relatedLinks,
+}: ArticlePageProps) {
+  const pageUrl = pagePath ? `${siteUrl}${pagePath}` : undefined;
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -39,14 +55,53 @@ export function ArticlePage({ eyebrow, title, intro, sections, faqs, relatedLink
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: title },
+      { "@type": "ListItem", position: 2, name: title, ...(pageUrl ? { item: pageUrl } : {}) },
     ],
   };
+  const pageDescription =
+    description || (typeof intro === "string" ? intro : "Orientação e tradução juramentada para documentos entre Brasil e Itália.");
+  const pageJsonLd =
+    schemaType === "Article"
+      ? {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: title,
+          description: pageDescription,
+          ...(pageUrl ? { url: pageUrl, mainEntityOfPage: pageUrl } : {}),
+          inLanguage: "pt-BR",
+          author: {
+            "@type": "Organization",
+            name: "Tradução Brasil Itália",
+            url: siteUrl,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Tradução Brasil Itália",
+            url: siteUrl,
+          },
+        }
+      : schemaType
+        ? {
+            "@context": "https://schema.org",
+            "@type": schemaType,
+            name: title,
+            description: pageDescription,
+            ...(pageUrl ? { url: pageUrl } : {}),
+            areaServed,
+            availableLanguage: ["Portuguese", "Italian"],
+            provider: {
+              "@type": "Organization",
+              name: "Tradução Brasil Itália",
+              url: siteUrl,
+            },
+          }
+        : null;
 
   return (
     <main className="min-h-screen bg-[#020912] text-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      {pageJsonLd ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} /> : null}
       <SiteHeader />
       <section className="relative overflow-hidden border-b border-[#c99a45]/25 px-5 pb-16 pt-36 sm:px-8 lg:px-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_10%,rgba(217,170,82,0.18),transparent_28%),linear-gradient(180deg,#071522_0%,#020912_78%)]" />

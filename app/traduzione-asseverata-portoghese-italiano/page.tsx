@@ -7,13 +7,13 @@ const pagePath = "/traduzione-asseverata-portoghese-italiano";
 const pageUrl = `${siteUrl}${pagePath}`;
 
 export const metadata: Metadata = {
-  title: "Traduzione Asseverata Portoghese Italiano | Valore Legale Garantito",
+  title: "Traduzione Asseverata Portoghese Italiano",
   description: "Traduzione asseverata in Tribunale dal portoghese all'italiano per documenti brasiliani. Servizio certificato per Comuni, Prefetture e Università.",
   alternates: {
     canonical: pagePath,
   },
   openGraph: {
-    title: "Traduzione Asseverata Portoghese Italiano | Valore Legale Garantito",
+    title: "Traduzione Asseverata Portoghese Italiano",
     description: "Traduzione asseverata in Tribunale dal portoghese all'italiano per documenti brasiliani. Servizio certificato per Comuni, Prefetture e Università.",
     url: pageUrl,
     type: "article",

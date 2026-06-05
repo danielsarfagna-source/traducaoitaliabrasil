@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { ArticlePage } from "../components/article-page";
 
 export const metadata: Metadata = {
-  title: "Como apostilar documento italiano na Itália para uso no Brasil e exterior",
+  title: "Apostilar Documento Italiano na Itália para Uso no Brasil",
   description:
-    "Entenda quando documentos italianos precisam de Apostila de Haia para uso no Brasil ou no exterior e a diferença entre apostilamento e tradução.",
+    "Apostila de Haia para documento italiano usado no Brasil ou exterior. Entenda certidões, procurações, atos notariais, tradução e ordem correta.",
+  alternates: {
+    canonical: "/apostilar-documento-italiano-na-italia",
+  },
 };
 
 export default function Page() {
@@ -12,6 +15,9 @@ export default function Page() {
     <ArticlePage
       eyebrow="Apostila de Haia"
       title="Como apostilar documento italiano na Itália para uso no Brasil e exterior"
+      pagePath="/apostilar-documento-italiano-na-italia"
+      schemaType="Service"
+      description="Orientação sobre apostilamento de documentos italianos na Itália e possível necessidade de tradução para uso no Brasil ou exterior."
       intro="O apostilamento é utilizado para que um documento emitido em um país possa ser reconhecido oficialmente em outro país participante da Convenção da Haia."
       sections={[
         {
@@ -30,6 +36,7 @@ export default function Page() {
             "documentos escolares",
             "documentos universitários",
             "procurações",
+            "atos notariais",
             "documentos administrativos",
             "documentos para cidadania",
             "documentos para casamento ou divórcio",
@@ -46,6 +53,7 @@ export default function Page() {
           title: "Documento italiano para usar no Brasil",
           body: [
             "Quando um documento italiano será apresentado no Brasil, o órgão brasileiro pode exigir apostilamento e tradução. A exigência exata depende do tipo de documento e da finalidade.",
+            "Em alguns casos, depois de apostilar o documento italiano, pode ser necessária tradução para português por tradutor juramentado no Brasil. Em outros, o próprio órgão pode aceitar o documento em italiano apostilado.",
           ],
         },
         {
@@ -77,10 +85,16 @@ export default function Page() {
           answer:
             "Sim. O atendimento pode orientar documentos em toda a Itália e também situações envolvendo uso no Brasil ou exterior.",
         },
+        {
+          question: "Quais documentos italianos podem precisar de apostila?",
+          answer:
+            "Certidões italianas, procurações, atos notariais, documentos escolares, universitários e documentos administrativos podem exigir apostila, conforme a finalidade.",
+        },
       ]}
       relatedLinks={[
         { title: "Tradução juramentada para cidadania italiana", href: "/traducao-juramentada-para-cidadania-italiana" },
-        { title: "Apostila de Haia e tradução juramentada", href: "/apostila-haia-traducao-juramentada-italia" }
+        { title: "Apostila de Haia e tradução juramentada", href: "/apostila-haia-traducao-juramentada-italia" },
+        { title: "Preço da tradução juramentada", href: "/preco-traducao-juramentada-portugues-italiano" }
       ]}
     />
   );

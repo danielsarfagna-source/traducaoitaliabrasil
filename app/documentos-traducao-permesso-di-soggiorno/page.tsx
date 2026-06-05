@@ -2,9 +2,12 @@ import type { Metadata } from "next";
 import { ArticlePage } from "../components/article-page";
 
 export const metadata: Metadata = {
-  title: "Documentos e Tradução Juramentada para o Permesso di Soggiorno",
+  title: "Tradução de Documentos para Permesso di Soggiorno",
   description:
-    "Quais documentos brasileiros precisam de tradução juramentada para pedir ou renovar o permesso di soggiorno na Itália e como evitar atrasos no processo.",
+    "Tradução juramentada de documentos brasileiros para permesso di soggiorno, Questura, motivos familiares, estudo, trabalho e renovação na Itália.",
+  alternates: {
+    canonical: "/documentos-traducao-permesso-di-soggiorno",
+  },
 };
 
 export default function Page() {
@@ -12,6 +15,9 @@ export default function Page() {
     <ArticlePage
       eyebrow="Permesso di Soggiorno"
       title="Documentos e traduções para o permesso di soggiorno na Itália"
+      pagePath="/documentos-traducao-permesso-di-soggiorno"
+      schemaType="Service"
+      description="Serviço de tradução juramentada de documentos brasileiros para permesso di soggiorno na Itália."
       intro="O permesso di soggiorno é o documento que sustenta a vida legal do brasileiro não europeu na Itália — e ele volta a cada renovação. Boa parte dos pedidos atrasa não pela imigração em si, mas por documento brasileiro entregue sem a tradução juramentada correta. Saber disso antes economiza meses."
       sections={[
         {
@@ -30,7 +36,8 @@ export default function Page() {
             "Reagrupamento/coesão familiar: certidões de nascimento e casamento que comprovam o vínculo.",
             "Permesso por motivos familiares: documentos de filiação e estado civil.",
             "Espera de cidadania: certidões da linha familiar.",
-            "Antecedentes e documentos pessoais, conforme o caso e a questura.",
+            "Antecedentes criminais, quando aplicável.",
+            "Documentos familiares e declarações solicitadas pela Questura ou Prefettura.",
           ],
         },
         {
@@ -49,6 +56,7 @@ export default function Page() {
           title: "Como ajudamos",
           body: [
             "Fazemos a tradução juramentada dos seus documentos brasileiros no padrão que a questura espera, com orientação em português sobre o que precisa ou não ser traduzido e apostilado para o seu tipo de permesso — antes de você gastar com página desnecessária. Envia pelo WhatsApp, recebe prazo e valor fechados, recebe pronto.",
+            "As exigências podem variar por motivo do permesso, Questura, Prefettura e documentação do caso. Por isso, não prometemos aprovação: ajudamos a preparar a tradução e a etapa documental com cautela.",
           ],
         },
       ]}
@@ -73,10 +81,16 @@ export default function Page() {
           question: "Vocês dizem o que eu preciso traduzir?",
           answer: "Sim — orientamos antes para você não pagar por tradução que não seria exigida.",
         },
+        {
+          question: "A tradução serve para a Questura?",
+          answer: "Pode servir quando a Questura solicita documentos brasileiros em italiano. A lista final de documentos deve ser confirmada conforme o motivo do permesso.",
+        },
       ]}
       relatedLinks={[
-        { title: "Tradução de documentos brasileiros para permesso di soggiorno", href: "/traducao-documentos-permesso-di-soggiorno" },
-        { title: "Tradução juramentada de certidões", href: "/traducao-juramentada-certidoes" }
+        { title: "Tradução juramentada de certidões", href: "/traducao-juramentada-certidoes" },
+        { title: "Tradução de antecedentes criminais para Itália", href: "/traducao-antecedentes-criminais-italia" },
+        { title: "Apostila de Haia e tradução", href: "/apostila-haia-traducao-juramentada-italia" },
+        { title: "Preço da tradução juramentada", href: "/preco-traducao-juramentada-portugues-italiano" }
       ]}
     />
   );

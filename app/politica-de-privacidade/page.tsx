@@ -12,7 +12,7 @@ export default function Page() {
       <TextContent>
         <p>Esta Política de Privacidade explica como coletamos, utilizamos, armazenamos e protegemos os dados pessoais enviados por usuários deste site e pelos canais de atendimento relacionados ao serviço de tradução juramentada, apostilamento e orientação documental.</p>
         <h2>1. Controlador dos dados</h2>
-        <p>[NOME DO TITULAR]<br />Contato: [E-MAIL DE CONTATO]<br />WhatsApp: +39 392 4605784</p>
+        <p>Tradução Brasil Itália<br />Contato para privacidade: pelo canal de atendimento informado no site<br />WhatsApp: +39 320 800 3406</p>
         <h2>2. Dados pessoais coletados</h2>
         <ul><li>nome;</li><li>telefone;</li><li>e-mail;</li><li>país ou cidade de residência;</li><li>informações enviadas voluntariamente pelo formulário ou WhatsApp;</li><li>documentos enviados para orçamento ou prestação do serviço;</li><li>dados necessários para comunicação, orçamento, tradução, apostilamento ou orientação documental.</li></ul>
         <h2>3. Finalidades do tratamento</h2>
@@ -30,7 +30,7 @@ export default function Page() {
         <h2>9. Documentos enviados</h2>
         <p>Os documentos enviados pelo usuário são utilizados exclusivamente para análise, orçamento ou execução do serviço solicitado.</p>
         <h2>10. Contato</h2>
-        <p>Para dúvidas ou solicitações sobre privacidade, entre em contato por: [E-MAIL DE CONTATO]</p>
+        <p>Para dúvidas ou solicitações sobre privacidade, utilize o canal de atendimento informado no site.</p>
       </TextContent>
     </PageShell>
   );
