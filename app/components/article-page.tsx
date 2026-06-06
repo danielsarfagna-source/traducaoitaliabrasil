@@ -2,6 +2,7 @@ import { FAQAccordion } from "./faq-accordion";
 import { Footer } from "./footer";
 import { SiteHeader } from "./site-header";
 import { WhatsAppButton } from "./whatsapp-button";
+import { serializeJsonLd } from "../lib/seo";
 import { siteUrl } from "../lib/site";
 import React from "react";
 import Link from "next/link";
@@ -41,6 +42,8 @@ export function ArticlePage({
   relatedLinks,
 }: ArticlePageProps) {
   const pageUrl = pagePath ? `${siteUrl}${pagePath}` : undefined;
+  const isItalian = pagePath?.startsWith("/traduzione-") ?? false;
+  const pageLanguage = isItalian ? "it-IT" : "pt-BR";
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -54,8 +57,8 @@ export function ArticlePage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
-      { "@type": "ListItem", position: 2, name: title, ...(pageUrl ? { item: pageUrl } : {}) },
+      { "@type": "ListItem", position: 1, name: isItalian ? "Home" : "Início", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: title, item: pageUrl ?? siteUrl },
     ],
   };
   const pageDescription =
@@ -68,7 +71,7 @@ export function ArticlePage({
           headline: title,
           description: pageDescription,
           ...(pageUrl ? { url: pageUrl, mainEntityOfPage: pageUrl } : {}),
-          inLanguage: "pt-BR",
+          inLanguage: pageLanguage,
           author: {
             "@type": "Organization",
             name: "Tradução Brasil Itália",
@@ -89,19 +92,17 @@ export function ArticlePage({
             ...(pageUrl ? { url: pageUrl } : {}),
             areaServed,
             availableLanguage: ["Portuguese", "Italian"],
-            provider: {
-              "@type": "Organization",
-              name: "Tradução Brasil Itália",
-              url: siteUrl,
-            },
+            provider: { "@id": `${siteUrl}/#service` },
           }
         : null;
 
   return (
     <main className="min-h-screen bg-[#020912] text-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      {pageJsonLd ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} /> : null}
+      {faqs.length > 0 ? (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd) }} />
+      ) : null}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }} />
+      {pageJsonLd ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(pageJsonLd) }} /> : null}
       <SiteHeader />
       <section className="relative overflow-hidden border-b border-[#c99a45]/25 px-5 pb-16 pt-36 sm:px-8 lg:px-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_10%,rgba(217,170,82,0.18),transparent_28%),linear-gradient(180deg,#071522_0%,#020912_78%)]" />

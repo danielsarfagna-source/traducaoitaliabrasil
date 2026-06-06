@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Apostilar Documento Italiano na Itália para Uso no Brasil",
-  description:
-    "Apostila de Haia para documento italiano usado no Brasil ou exterior. Entenda certidões, procurações, atos notariais, tradução e ordem correta.",
-  alternates: {
-    canonical: "/apostilar-documento-italiano-na-italia",
-  },
-};
+  description: "Apostila de Haia para documento italiano usado no Brasil ou exterior. Entenda certidões, procurações, atos notariais, tradução e ordem correta.",
+  path: "/apostilar-documento-italiano-na-italia",
+});
 
 export default function Page() {
   return (

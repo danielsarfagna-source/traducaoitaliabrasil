@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-documentos-casamento-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução para Casamento na Itália | Nulla Osta e Documentos",
   description: "Vai casar na Itália? Saiba quais documentos brasileiros precisam de tradução juramentada e como obter o Nulla Osta per il Matrimonio.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução para Casamento na Itália | Nulla Osta e Documentos",
-    description: "Vai casar na Itália? Saiba quais documentos brasileiros precisam de tradução juramentada e como obter o Nulla Osta per il Matrimonio.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-documentos-casamento-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Estado Civil / Casamento"
       title="Tradução de documentos para casamento na Itália (Nulla Osta)"
       intro="O casamento de cidadãos brasileiros em solo italiano (seja com italianos ou com outros estrangeiros) exige a apresentação do 'Nulla Osta al Matrimonio'. Este documento atesta que não existem impedimentos legais para a união. Para obtê-lo, suas certidões brasileiras devem estar perfeitamente traduzidas e apostiladas."

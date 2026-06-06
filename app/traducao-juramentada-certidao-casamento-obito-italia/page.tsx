@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-juramentada-certidao-casamento-obito-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada de Certidão de Casamento e Óbito | Itália",
   description: "Tradução juramentada de certidões de casamento e óbito brasileiras para montagem de pasta de cidadania italiana. Especialistas em documentação jurídica.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução Juramentada de Certidão de Casamento e Óbito | Itália",
-    description: "Tradução juramentada de certidões de casamento e óbito brasileiras para montagem de pasta de cidadania italiana. Especialistas em documentação jurídica.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-juramentada-certidao-casamento-obito-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Certidões / Cidadania"
       title="Tradução juramentada de certidão de casamento e óbito para Itália"
       intro="As certidões de casamento e óbito são as peças que conectam as gerações na sua árvore genealógica. Para a cidadania italiana (jure sanguinis), elas provam a legitimidade da linha de transmissão e o ciclo de vida dos seus antepassados. Uma tradução impecável destas certidões evita que seu processo pare em exigências nos Comunes ou Tribunais italianos."

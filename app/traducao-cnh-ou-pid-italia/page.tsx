@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/traducao-cnh-ou-pid-italia";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução da CNH ou PID na Itália: Qual Usar?",
-  description:
-    "Compare tradução juramentada da CNH e PID para uso na Itália. Entenda quando cada documento pode ser solicitado e o que confirmar antes.",
-  alternates: {
-    canonical: pagePath,
-  },
-};
+  description: "Compare tradução juramentada da CNH e PID para uso na Itália. Entenda quando cada documento pode ser solicitado e o que confirmar antes.",
+  path: "/traducao-cnh-ou-pid-italia",
+});
 
 export default function Page() {
   return (

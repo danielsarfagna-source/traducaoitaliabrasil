@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/traducao-cnh-dirigir-na-italia";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada de CNH Brasileira na Itália",
-  description:
-    "Tradução juramentada da CNH brasileira para uso na Itália, Motorizzazione, direção e conversão quando aceita pelo órgão. Atendimento em português.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução Juramentada de CNH Brasileira na Itália",
-    description:
-      "Envie frente e verso da CNH pelo WhatsApp e receba orientação sobre tradução juramentada, prazo, valor e uso perante órgãos italianos.",
-    url: pagePath,
-    type: "article",
-  },
-};
+  description: "Tradução juramentada da CNH brasileira para uso na Itália, Motorizzazione, direção e conversão quando aceita pelo órgão. Atendimento em português.",
+  path: "/traducao-cnh-dirigir-na-italia",
+  ogDescription: "Envie frente e verso da CNH pelo WhatsApp e receba orientação sobre tradução juramentada, prazo, valor e uso perante órgãos italianos.",
+});
 
 export default function Page() {
   return (

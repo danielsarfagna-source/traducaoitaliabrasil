@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/dichiarazione-di-valore-traducao-diploma";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada de Diploma Brasileiro para Itália",
-  description:
-    "Diploma, histórico escolar, ementas, apostila, CIMEA e Dichiarazione di Valore. Entenda a tradução de documentos acadêmicos para estudar na Itália.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução Juramentada de Diploma Brasileiro para Itália",
-    description:
-      "Prepare diploma e histórico brasileiro para universidade, CIMEA ou Dichiarazione di Valore na Itália sem prometer reconhecimento automático.",
-    url: pagePath,
-    type: "article",
-  },
-};
+  description: "Diploma, histórico escolar, ementas, apostila, CIMEA e Dichiarazione di Valore. Entenda a tradução de documentos acadêmicos para estudar na Itália.",
+  path: "/dichiarazione-di-valore-traducao-diploma",
+  ogDescription: "Prepare diploma e histórico brasileiro para universidade, CIMEA ou Dichiarazione di Valore na Itália sem prometer reconhecimento automático.",
+});
 
 export default function Page() {
   return (

@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { PageShell, TextContent } from "../components/page-shell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Política de Privacidade",
   description: "Política de privacidade para atendimento de tradução juramentada, apostilamento e orientação documental.",
-};
+  path: "/politica-de-privacidade",
+});
 
 export default function Page() {
   return (
-    <PageShell title="Política de Privacidade" cta={false}>
+    <PageShell title="Política de Privacidade" pagePath="/politica-de-privacidade" cta={false}>
       <TextContent>
         <p>Esta Política de Privacidade explica como coletamos, utilizamos, armazenamos e protegemos os dados pessoais enviados por usuários deste site e pelos canais de atendimento relacionados ao serviço de tradução juramentada, apostilamento e orientação documental.</p>
         <h2>1. Controlador dos dados</h2>

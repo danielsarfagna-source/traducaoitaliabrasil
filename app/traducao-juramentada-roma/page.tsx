@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/traducao-juramentada-roma";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada em Roma | Português Italiano",
-  description:
-    "Tradução juramentada em Roma para brasileiros. CNH, certidões, cidadania, diploma, permesso e apostila. Atendimento em português.",
-  alternates: {
-    canonical: pagePath,
+  description: "Tradução juramentada em Roma para brasileiros. CNH, certidões, cidadania, diploma, permesso e apostila. Atendimento em português.",
+  path: "/traducao-juramentada-roma",
+  languages: {
+    "pt-BR": "/traducao-juramentada-roma",
+    "it-IT": "/traduzione-giurata-portoghese-italiano-roma"
   },
-};
+});
 
 export default function Page() {
   return (

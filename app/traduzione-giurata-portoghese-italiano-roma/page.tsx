@@ -1,28 +1,25 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traduzione-giurata-portoghese-italiano-roma";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Traduzione Giurata Portoghese Italiano a Roma | Preventivo Rapido",
   description: "Servizio di traduzione giurata dal portoghese all'italiano a Roma. Traduttori ufficiali per cittadinanza, documenti legali e visti. Richiedi preventivo.",
-  alternates: {
-    canonical: pagePath,
+  path: "/traduzione-giurata-portoghese-italiano-roma",
+  locale: "it_IT",
+  languages: {
+    "pt-BR": "/traducao-juramentada-roma",
+    "it-IT": "/traduzione-giurata-portoghese-italiano-roma"
   },
-  openGraph: {
-    title: "Traduzione Giurata Portoghese Italiano a Roma | Preventivo Rapido",
-    description: "Servizio di traduzione giurata dal portoghese all'italiano a Roma. Traduttori ufficiali per cittadinanza, documenti legali e visti. Richiedi preventivo.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Traduzione Giurata"
       title="Traduzione giurata portoghese italiano a Roma"
       intro="Se ti trovi a Roma o devi presentare documenti brasiliani presso le autorità italiane (Comune, Prefettura, Tribunale, Questura), avrai bisogno di una traduzione ufficiale. La traduzione giurata (o asseverata) dal portoghese all'italiano garantisce che il documento straniero abbia pieno valore legale in Italia."

@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/traducao-juramentada-turim";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada em Turim | Português Italiano",
-  description:
-    "Tradução juramentada em Turim para brasileiros no Piemonte. CNH, cidadania, certidões, diploma, permesso e apostila.",
-  alternates: {
-    canonical: pagePath,
-  },
-};
+  description: "Tradução juramentada em Turim para brasileiros no Piemonte. CNH, cidadania, certidões, diploma, permesso e apostila.",
+  path: "/traducao-juramentada-turim",
+});
 
 export default function Page() {
   return (

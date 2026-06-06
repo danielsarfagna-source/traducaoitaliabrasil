@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-documentos-brasileiros-na-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada de Documentos Brasileiros na Itália",
   description: "Serviço oficial de tradução de documentos brasileiros para autoridades italianas. Certidões, CNPJ, procurações, processos judiciais e contratos.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução Juramentada de Documentos Brasileiros na Itália",
-    description: "Serviço oficial de tradução de documentos brasileiros para autoridades italianas. Certidões, CNPJ, procurações, processos judiciais e contratos.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-documentos-brasileiros-na-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Legalização / Processos"
       title="Tradução juramentada de documentos brasileiros na Itália"
       intro="Empresas brasileiras abrindo filiais na Itália, cidadãos comprando imóveis, procurações (procura speciale) e validação de contratos. Apresentar documentos gerados no Brasil para o estado ou mercado italiano requer rigorosa tradução oficial, muitas vezes com vocabulário técnico, comercial ou jurídico complexo."

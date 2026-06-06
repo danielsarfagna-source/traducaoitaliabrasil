@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { PageShell, TextContent } from "../components/page-shell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Termos de Uso",
   description: "Termos de uso do site de tradução juramentada, apostilamento e orientação documental português italiano.",
-};
+  path: "/termos-de-uso",
+});
 
 export default function Page() {
   return (
-    <PageShell title="Termos de Uso" cta={false}>
+    <PageShell title="Termos de Uso" pagePath="/termos-de-uso" cta={false}>
       <TextContent>
         <p>Ao acessar este site ou solicitar atendimento, o usuário concorda com estes Termos de Uso.</p>
         <h2>1. Finalidade do site</h2><p>Este site apresenta informações sobre serviços de tradução juramentada português → italiano, tradução italiano → português, apostilamento e orientação documental.</p>

@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-juramentada-diploma-brasileiro-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada de Diploma Brasileiro para Itália",
   description: "Tradução juramentada de diplomas e títulos acadêmicos brasileiros para universidades italianas, CIMEA e Dichiarazione di Valore.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução Juramentada de Diploma Brasileiro para Itália",
-    description: "Tradução juramentada de diplomas e títulos acadêmicos brasileiros para universidades italianas, CIMEA e Dichiarazione di Valore.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-juramentada-diploma-brasileiro-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Estudos / Universidade"
       title="Tradução juramentada de diploma brasileiro para Itália"
       intro="Estudar na Itália ou validar sua profissão no exterior exige a apresentação do seu Diploma brasileiro. Porém, o documento original por si só não tem valor legal imediato na Europa. Ele necessita da tradução juramentada para o italiano, acompanhada da Apostila de Haia, para processos universitários ou de reconhecimento profissional."

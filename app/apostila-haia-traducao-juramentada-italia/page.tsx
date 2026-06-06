@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/apostila-haia-traducao-juramentada-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Apostila de Haia e Tradução Juramentada para Itália (Guia)",
   description: "Entenda a ordem correta: Apostila de Haia no documento brasileiro, tradução juramentada para italiano e o apostilamento duplo. Evite devoluções.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Apostila de Haia e Tradução Juramentada para Itália (Guia)",
-    description: "Entenda a ordem correta: Apostila de Haia no documento brasileiro, tradução juramentada para italiano e o apostilamento duplo. Evite devoluções.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/apostila-haia-traducao-juramentada-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Legalização Internacional"
       title="Apostila de Haia e tradução juramentada para Itália"
       intro="A Convenção da Apostila de Haia substituiu as antigas legalizações consulares demoradas. O Brasil e a Itália são signatários, o que significa que o 'selo' da Apostila valida automaticamente documentos públicos de um país no outro. Mas a ordem entre apostilar e traduzir é a principal causa de erros e perda de dinheiro para requerentes brasileiros."

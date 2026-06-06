@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/traducao-juramentada-milao";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada em Milão | Português Italiano",
-  description:
-    "Tradução juramentada em Milão para brasileiros na Lombardia. CNH, cidadania, certidões, diploma, permesso e apostila.",
-  alternates: {
-    canonical: pagePath,
-  },
-};
+  description: "Tradução juramentada em Milão para brasileiros na Lombardia. CNH, cidadania, certidões, diploma, permesso e apostila.",
+  path: "/traducao-juramentada-milao",
+});
 
 export default function Page() {
   return (

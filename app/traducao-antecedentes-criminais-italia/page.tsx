@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-antecedentes-criminais-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução de Antecedentes Criminais para Itália | Polícia Federal",
   description: "Tradução juramentada de certidão de antecedentes criminais da Polícia Federal para cidadania por casamento, visto de trabalho e permesso di soggiorno.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução de Antecedentes Criminais para Itália | Polícia Federal",
-    description: "Tradução juramentada de certidão de antecedentes criminais da Polícia Federal para cidadania por casamento, visto de trabalho e permesso di soggiorno.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-antecedentes-criminais-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Segurança / Vistos"
       title="Tradução juramentada de antecedentes criminais para a Itália"
       intro="A Certidão de Antecedentes Criminais emitida pela Polícia Federal do Brasil é um requisito recorrente para quem deseja viver, trabalhar ou obter a cidadania italiana por casamento (naturalização). Por ser um documento com validade curtíssima (90 dias), a tradução juramentada deve ser executada com máxima agilidade."

@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução de Documentos para Permesso di Soggiorno",
-  description:
-    "Tradução juramentada de documentos brasileiros para permesso di soggiorno, Questura, motivos familiares, estudo, trabalho e renovação na Itália.",
-  alternates: {
-    canonical: "/documentos-traducao-permesso-di-soggiorno",
-  },
-};
+  description: "Tradução juramentada de documentos brasileiros para permesso di soggiorno, Questura, motivos familiares, estudo, trabalho e renovação na Itália.",
+  path: "/documentos-traducao-permesso-di-soggiorno",
+});
 
 export default function Page() {
   return (

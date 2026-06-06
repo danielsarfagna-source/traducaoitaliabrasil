@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/traducao-juramentada-para-cidadania-italiana";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada para Cidadania Italiana",
-  description:
-    "Tradução juramentada de certidões brasileiras para cidadania italiana. Nascimento, casamento, óbito, inteiro teor, apostila e orientação em português.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução Juramentada para Cidadania Italiana",
-    description:
-      "Prepare certidões brasileiras para cidadania italiana com tradução juramentada, orientação sobre apostila e conferência de divergências.",
-    url: pagePath,
-    type: "article",
-  },
-};
+  description: "Tradução juramentada de certidões brasileiras para cidadania italiana. Nascimento, casamento, óbito, inteiro teor, apostila e orientação em português.",
+  path: "/traducao-juramentada-para-cidadania-italiana",
+  ogDescription: "Prepare certidões brasileiras para cidadania italiana com tradução juramentada, orientação sobre apostila e conferência de divergências.",
+});
 
 export default function Page() {
   return (

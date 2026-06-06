@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/cnh-brasileira-na-italia-pode-dirigir-quanto-tempo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "CNH Brasileira na Itália: Por Quanto Tempo Posso Dirigir?",
-  description:
-    "Entenda por quanto tempo a CNH brasileira pode ser usada na Itália e quando PID, tradução juramentada ou conversão podem ser exigidas.",
-  alternates: {
-    canonical: pagePath,
-  },
-};
+  description: "Entenda por quanto tempo a CNH brasileira pode ser usada na Itália e quando PID, tradução juramentada ou conversão podem ser exigidas.",
+  path: "/cnh-brasileira-na-italia-pode-dirigir-quanto-tempo",
+});
 
 export default function Page() {
   return (

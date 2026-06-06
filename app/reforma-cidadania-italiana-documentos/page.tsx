@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Reforma da Cidadania Italiana 2025 e Documentos",
-  description:
-    "Entenda, com cautela, como a Lei 74/2025 e a Sentença 63/2026 reforçam a importância de certidões, apostila e tradução juramentada.",
-  alternates: {
-    canonical: "/reforma-cidadania-italiana-documentos",
-  },
-};
+  description: "Entenda, com cautela, como a Lei 74/2025 e a Sentença 63/2026 reforçam a importância de certidões, apostila e tradução juramentada.",
+  path: "/reforma-cidadania-italiana-documentos",
+});
 
 export default function Page() {
   return (

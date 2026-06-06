@@ -5,8 +5,9 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
       userAgent: "*",
-      allow: "/",
+      allow: ["/", "/_next/image", "/_next/static", "/*.css", "/*.js"],
     },
     sitemap: `${siteUrl}/sitemap.xml`,
+    host: siteUrl,
   };
 }

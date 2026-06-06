@@ -1,24 +1,15 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-juramentada-certidao-nascimento-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada de Certidão de Nascimento para Itália",
   description: "Tradução juramentada de certidão de nascimento brasileira (inteiro teor) para cidadania italiana, casamento e uso oficial na Itália.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução Juramentada de Certidão de Nascimento para Itália",
-    description: "Tradução juramentada de certidão de nascimento brasileira (inteiro teor) para cidadania italiana, casamento e uso oficial na Itália.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-juramentada-certidao-nascimento-italia",
+});
 
 export default function Page() {
   return (

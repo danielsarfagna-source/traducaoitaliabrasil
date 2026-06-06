@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { CookieBanner } from "./components/cookie-banner";
 import "./globals.css";
+import { serializeJsonLd } from "./lib/seo";
 import { siteUrl } from "./lib/site";
 
 export const metadata: Metadata = {
@@ -22,15 +23,6 @@ export const metadata: Metadata = {
     shortcut: [{ url: "/favicon.ico" }],
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
-  keywords: [
-    "tradução de documentos Brasil Itália",
-    "tradução juramentada para italiano",
-    "tradução juramentada português italiano",
-    "tradução documentos brasileiros Itália",
-    "apostila de haia Itália",
-    "documentos para cidadania italiana",
-    "tradução italiano português",
-  ],
   openGraph: {
     title: "Tradução Juramentada Brasil ↔ Itália | Atendimento em Português",
     description:
@@ -58,40 +50,53 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const organizationJsonLd = {
+  const globalJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Tradução Brasil Itália",
-    url: siteUrl,
-    logo: `${siteUrl}/icon-512x512.png`,
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+39-320-800-3406",
-      contactType: "customer service",
-      availableLanguage: ["Portuguese", "Italian"]
-    },
-    sameAs: [
-      siteUrl
-    ]
-  };
-  const websiteJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Tradução Brasil Itália",
-    url: siteUrl,
-    inLanguage: "pt-BR",
-    publisher: {
-      "@type": "Organization",
-      name: "Tradução Brasil Itália",
-      url: siteUrl,
-    },
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "ProfessionalService"],
+        "@id": `${siteUrl}/#service`,
+        name: "TraducaoBrasilItalia",
+        alternateName: "Tradução Juramentada Brasil ↔ Itália",
+        url: siteUrl,
+        logo: `${siteUrl}/logo-header.png`,
+        image: `${siteUrl}/assets/hero-professional-wide.png`,
+        description:
+          "Tradução juramentada português ↔ italiano para documentos brasileiros usados em processos oficiais na Itália: cidadania, CNH, certidões, diplomas, permesso di soggiorno e apostilamento.",
+        telephone: "+393208003406",
+        areaServed: [
+          { "@type": "Country", name: "Italia" },
+          { "@type": "Country", name: "Brasil" },
+        ],
+        serviceType: [
+          "Tradução juramentada português italiano",
+          "Tradução asseverata portoghese italiano",
+          "Apostilamento Haia",
+          "Orientação documental Brasil Itália",
+        ],
+        availableLanguage: ["pt-BR", "it-IT"],
+        knowsLanguage: ["Portuguese", "Italian"],
+        // SUGESTÃO: incluir perfis sociais em sameAs quando houver URLs públicas confirmadas.
+        sameAs: [],
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: "TraducaoBrasilItalia",
+        inLanguage: "pt-BR",
+        publisher: { "@id": `${siteUrl}/#service` },
+      },
+    ],
   };
 
   return (
     <html lang="pt-BR">
       <body>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(globalJsonLd) }}
+        />
         {children}
         <CookieBanner />
       </body>

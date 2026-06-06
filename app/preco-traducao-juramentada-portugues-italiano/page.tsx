@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/preco-traducao-juramentada-portugues-italiano";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Preço Tradução Juramentada Português Italiano",
-  description:
-    "Veja o que influencia o preço da tradução juramentada português italiano. Envie o documento pelo WhatsApp e receba orientação.",
-  alternates: {
-    canonical: pagePath,
-  },
-};
+  description: "Veja o que influencia o preço da tradução juramentada português italiano. Envie o documento pelo WhatsApp e receba orientação.",
+  path: "/preco-traducao-juramentada-portugues-italiano",
+});
 
 export default function Page() {
   return (

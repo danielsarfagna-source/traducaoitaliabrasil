@@ -1,22 +1,44 @@
 import { CTASection } from "./cta-section";
 import { Footer } from "./footer";
 import { SiteHeader } from "./site-header";
+import { serializeJsonLd } from "../lib/seo";
+import { siteUrl } from "../lib/site";
 
 export function PageShell({
   eyebrow,
   title,
   intro,
+  pagePath,
   children,
   cta = true,
 }: {
   eyebrow?: string;
   title: string;
   intro?: string;
+  pagePath: `/${string}`;
   children: React.ReactNode;
   cta?: boolean;
 }) {
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: title,
+        item: `${siteUrl}${pagePath}`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#020817] text-[#f8f5ee]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }}
+      />
       <SiteHeader />
       <section className="relative overflow-hidden border-b border-[#d8a84f]/24 px-5 pb-16 pt-36 sm:px-8 lg:px-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_74%_10%,rgba(216,168,79,0.18),transparent_28%),linear-gradient(180deg,#07111f_0%,#020817_78%)]" />

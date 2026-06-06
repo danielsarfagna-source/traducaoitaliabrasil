@@ -1,28 +1,25 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traduzione-asseverata-portoghese-italiano";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Traduzione Asseverata Portoghese Italiano",
   description: "Traduzione asseverata in Tribunale dal portoghese all'italiano per documenti brasiliani. Servizio certificato per Comuni, Prefetture e Università.",
-  alternates: {
-    canonical: pagePath,
+  path: "/traduzione-asseverata-portoghese-italiano",
+  locale: "it_IT",
+  languages: {
+    "pt-BR": "/traducao-juramentada-italiano",
+    "it-IT": "/traduzione-asseverata-portoghese-italiano"
   },
-  openGraph: {
-    title: "Traduzione Asseverata Portoghese Italiano",
-    description: "Traduzione asseverata in Tribunale dal portoghese all'italiano per documenti brasiliani. Servizio certificato per Comuni, Prefetture e Università.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Traduzione Asseverata"
       title="Traduzione asseverata portoghese italiano"
       intro="La traduzione asseverata (spesso chiamata semplicemente traduzione giurata in Italia) è il processo mediante il quale un traduttore ufficiale si reca in Tribunale o dal Giudice di Pace per giurare di aver tradotto fedelmente il testo dal portoghese all'italiano, assumendosi la responsabilità penale e civile del lavoro svolto."

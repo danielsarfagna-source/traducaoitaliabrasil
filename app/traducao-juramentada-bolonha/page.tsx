@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 const pagePath = "/traducao-juramentada-bolonha";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada em Bolonha | Português Italiano",
-  description:
-    "Tradução juramentada em Bolonha para brasileiros na Emilia-Romagna. Diploma, cidadania, certidões, CNH, permesso e apostila.",
-  alternates: {
-    canonical: pagePath,
-  },
-};
+  description: "Tradução juramentada em Bolonha para brasileiros na Emilia-Romagna. Diploma, cidadania, certidões, CNH, permesso e apostila.",
+  path: "/traducao-juramentada-bolonha",
+});
 
 export default function Page() {
   return (

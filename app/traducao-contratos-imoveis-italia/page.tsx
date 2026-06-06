@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-contratos-imoveis-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução para Compra de Imóveis na Itália | Contratos e Procura",
   description: "Vai comprar casa na Itália? Tradução juramentada de procurações, contratos de compra e venda (compromesso) e documentos bancários.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução para Compra de Imóveis na Itália | Contratos e Procura",
-    description: "Vai comprar casa na Itália? Tradução juramentada de procurações, contratos de compra e venda (compromesso) e documentos bancários.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-contratos-imoveis-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Investimento / Negócios"
       title="Tradução de contratos e documentos para compra de imóveis na Itália"
       intro="O mercado imobiliário italiano atrai investidores brasileiros em busca de casas de 1 euro ou propriedades de luxo na Toscana. Toda transação imobiliária na Itália passa obrigatoriamente por um Notaio (Notário), que exige a tradução oficial de qualquer documento estrangeiro envolvido na operação."

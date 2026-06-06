@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-documentos-medicos-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução para Médicos e Profissionais de Saúde na Itália (SSN)",
   description: "Tradução juramentada de ementas, diplomas e históricos para médicos e enfermeiros brasileiros que buscam o reconhecimento do título na Itália.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução para Médicos e Profissionais de Saúde na Itália (SSN)",
-    description: "Tradução juramentada de ementas, diplomas e históricos para médicos e enfermeiros brasileiros que buscam o reconhecimento do título na Itália.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-documentos-medicos-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Saúde / Profissional"
       title="Tradução de documentos médicos para reconhecimento na Itália"
       intro="A Itália possui uma alta demanda por profissionais de saúde, mas o processo de reconhecimento de títulos brasileiros (Equipollenza) junto ao Ministero della Salute é um dos mais rigorosos da Europa. A tradução juramentada de centenas de páginas de ementas curriculares e cargas horárias é o alicerce deste processo."

@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { PageShell, TextContent } from "../components/page-shell";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Política de Cookies",
   description: "Política de cookies com opções de consentimento para cookies técnicos, analíticos e marketing.",
-};
+  path: "/cookie-policy",
+});
 
 export default function Page() {
   return (
-    <PageShell title="Política de Cookies" cta={false}>
+    <PageShell title="Política de Cookies" pagePath="/cookie-policy" cta={false}>
       <TextContent>
         <p>Esta Política de Cookies explica como este site utiliza cookies e tecnologias semelhantes.</p>
         <h2>1. O que são cookies</h2>

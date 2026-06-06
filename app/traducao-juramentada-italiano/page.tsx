@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada Português Italiano na Itália",
-  description:
-    "Tradução juramentada português italiano para documentos brasileiros usados na Itália. CNH, certidões, cidadania, diploma, permesso e apostila.",
-  alternates: {
-    canonical: "/traducao-juramentada-italiano",
+  description: "Tradução juramentada português italiano para documentos brasileiros usados na Itália. CNH, certidões, cidadania, diploma, permesso e apostila.",
+  path: "/traducao-juramentada-italiano",
+  languages: {
+    "pt-BR": "/traducao-juramentada-italiano",
+    "it-IT": "/traduzione-asseverata-portoghese-italiano"
   },
-};
+});
 
 export default function Page() {
   return (

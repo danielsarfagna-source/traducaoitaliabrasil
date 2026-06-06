@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-historico-escolar-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada de Histórico Escolar para Itália",
   description: "Tradução oficial e juramentada de histórico escolar e universitário para matrícula em faculdades italianas, bolsas de estudo e CIMEA.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução Juramentada de Histórico Escolar para Itália",
-    description: "Tradução oficial e juramentada de histórico escolar e universitário para matrícula em faculdades italianas, bolsas de estudo e CIMEA.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-historico-escolar-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Estudos / Universidade"
       title="Tradução juramentada de histórico escolar brasileiro para Itália"
       intro="O Histórico Escolar (ou Histórico Acadêmico Universitário) é o documento mais detalhado da sua vida estudantil. Ele lista matérias, cargas horárias e notas. Para ingressar em uma universidade italiana ou obter equivalência de matérias, a tradução juramentada deste documento deve ser técnica e matematicamente impecável."

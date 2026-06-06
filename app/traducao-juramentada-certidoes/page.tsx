@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução Juramentada de Certidões para Itália",
-  description:
-    "Tradução juramentada de certidão de nascimento, casamento, óbito e inteiro teor para cidadania, Comune, consulado, permesso e uso na Itália.",
-  alternates: {
-    canonical: "/traducao-juramentada-certidoes",
-  },
-};
+  description: "Tradução juramentada de certidão de nascimento, casamento, óbito e inteiro teor para cidadania, Comune, consulado, permesso e uso na Itália.",
+  path: "/traducao-juramentada-certidoes",
+});
 
 export default function Page() {
   return (

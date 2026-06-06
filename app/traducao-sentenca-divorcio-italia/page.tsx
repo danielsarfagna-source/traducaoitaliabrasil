@@ -1,28 +1,20 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 import Link from "next/link";
-import { siteUrl } from "../lib/site";
 
 const pagePath = "/traducao-sentenca-divorcio-italia";
-const pageUrl = `${siteUrl}${pagePath}`;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Tradução de Sentença de Divórcio para Itália | Homologação",
   description: "Precisa traduzir sentença de divórcio para a Itália? Saiba como funciona a tradução juramentada de petição inicial, ata de audiência e trânsito em julgado.",
-  alternates: {
-    canonical: pagePath,
-  },
-  openGraph: {
-    title: "Tradução de Sentença de Divórcio para Itália | Homologação",
-    description: "Precisa traduzir sentença de divórcio para a Itália? Saiba como funciona a tradução juramentada de petição inicial, ata de audiência e trânsito em julgado.",
-    url: pageUrl,
-    type: "article",
-  },
-};
+  path: "/traducao-sentenca-divorcio-italia",
+});
 
 export default function Page() {
   return (
     <ArticlePage
+      pagePath={pagePath}
       eyebrow="Legal / Judicial"
       title="Tradução juramentada de sentença de divórcio para a Itália"
       intro="O divórcio realizado no Brasil não tem efeito automático na Itália. Para que um cidadão brasileiro ou ítalo-brasileiro possa casar novamente na Itália ou atualizar seu estado civil no Comune (ANAGRE), é obrigatório apresentar a sentença de divórcio devidamente traduzida por um tradutor juramentado e apostilada."
