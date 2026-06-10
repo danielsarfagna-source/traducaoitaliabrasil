@@ -12,12 +12,33 @@ import { WhatsAppButton } from "./components/whatsapp-button";
 import { faqItems, serviceCards } from "./lib/content";
 import { siteUrl } from "./lib/site";
 
+const homepageTitle =
+  "Tradução Juramentada Brasil-Itália | Documentos Brasileiros na Itália";
+const homepageDescription =
+  "Atendimento em português: traduza CNH, certidões, diplomas e documentos brasileiros para uso na Itália. Orçamento pelo WhatsApp e preço justo.";
+
 export const metadata: Metadata = {
-  title: "Tradução Juramentada Brasil ↔ Itália | Atendimento em Português",
-  description:
-    "Tradução juramentada de qualquer documento — CNH, diplomas, certidões, cidadania. Aceita em toda a Itália. Orientação e orçamento rápido pelo WhatsApp.",
+  title: {
+    absolute: homepageTitle,
+  },
+  description: homepageDescription,
   alternates: {
     canonical: "/",
+  },
+  openGraph: {
+    title: homepageTitle,
+    description: homepageDescription,
+    url: siteUrl,
+    siteName: "TraducaoBrasilItalia",
+    images: ["/assets/hero-professional-wide.png"],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homepageTitle,
+    description: homepageDescription,
+    images: ["/assets/hero-professional-wide.png"],
   },
 };
 
