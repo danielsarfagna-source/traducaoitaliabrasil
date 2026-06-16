@@ -6,15 +6,16 @@ import { CNHBlock, DocumentCards, HowItWorks, MobileFloatingCTA } from "../compo
 const pagePath = "/traducao-juramentada-italiano";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Tradução juramentada italiano | Português → italiano para uso oficial na Itália",
+  // TAREFA 3 — reforça "juramentada português → italiano" no title.
+  title: "Tradução juramentada português → italiano | uso na Itália",
   description:
-    "Tradução juramentada português italiano para documentos brasileiros: certidões, CNH, diplomas, sentenças, procurações e contratos. Para Comune, Tribunale, Università e Questura.",
+    "Tradução juramentada ou asseverata de documentos brasileiros para italiano, com orientação para uso oficial perante órgãos italianos.",
   path: pagePath,
   languages: {
     "pt-BR": pagePath,
     "it-IT": "/traduzione-asseverata-portoghese-italiano",
   },
-  ogTitle: "Tradução juramentada italiano — para documentos brasileiros usados na Itália",
+  ogTitle: "Tradução juramentada português → italiano para a Itália",
   ogDescription:
     "Tradução com fé pública português → italiano para processos oficiais: cidadania, casamento, estudo, trabalho e imigração.",
 });
@@ -29,7 +30,7 @@ export default function Page() {
       areaServed="Brasil e Itália"
       serviceType="Tradução juramentada português-italiano"
       description="Tradução juramentada português italiano para documentos brasileiros apresentados a autoridades italianas."
-      intro="Precisa apresentar CNH, certidão, diploma, antecedentes ou documentos brasileiros na Itália? Envie uma foto ou PDF pelo WhatsApp e receba orientação, prazo e valor antes de começar."
+      intro="Sim. Em muitos casos, documentos brasileiros precisam de tradução para italiano para serem aceitos por órgãos italianos. Dependendo do uso e do órgão destinatário, também pode ser exigida Apostila de Haia e tradução asseverata. Envie uma foto ou PDF pelo WhatsApp para confirmar o formato, o prazo e o valor."
       heroCTA={{
         text: "Pedir orçamento pelo WhatsApp",
         message: "Olá, preciso de uma tradução juramentada português–italiano para uso na Itália. Quero saber valor, prazo e próximos passos.",
@@ -47,7 +48,7 @@ export default function Page() {
         {
           title: "O que é tradução juramentada e por que ela é exigida",
           body: [
-            "A tradução juramentada (ou asseverata) é a ponte legal que permite que seu documento brasileiro seja aceito por autoridades na Itália. Sem ela, um documento em português não tem validade jurídica perante órgãos oficiais.",
+            "A tradução juramentada ou asseverata é usada quando um documento brasileiro precisa ser compreendido e apresentado formalmente na Itália. O formato necessário depende do procedimento e da autoridade destinatária.",
           ],
           subsections: [
             {
@@ -59,7 +60,7 @@ export default function Page() {
             {
               title: "Onde a tradução é obrigatória",
               body: [
-                "Você precisará de tradução juramentada sempre que apresentar documentos ao Comune (cidadania e casamento), Motorizzazione (CNH), Università (estudo), Questura (permesso di soggiorno) ou Tribunale (processos judiciais).",
+                "Comune, Motorizzazione, Università, Questura e Tribunale podem exigir tradução formal conforme o documento e o procedimento. Confirme a lista e o formato diretamente com o órgão destinatário.",
               ],
             },
           ],
@@ -79,7 +80,7 @@ export default function Page() {
             {
               title: "Traduzione Asseverata (feita na Itália)",
               body: [
-                "O tradutor leva o documento ao Tribunale italiano e assina um termo de juramento. É a forma mais segura de garantir aceitação em qualquer Comune ou órgão italiano, pois o ato de fé pública ocorre em solo italiano.",
+                "O tradutor leva o documento ao órgão italiano competente e assina o termo de juramento. Esse formato confere fé pública à tradução na Itália, mas o órgão destinatário continua responsável por decidir se o dossiê atende ao procedimento.",
               ],
             },
           ],
@@ -112,8 +113,8 @@ export default function Page() {
               [
                 "Aceitação",
                 "Geral (pode haver restrição)",
-                "Total em todo território",
-                "Obrigatória para docs BR",
+                "Conforme o órgão destinatário",
+                "Conforme o documento e a finalidade",
               ],
             ],
           },
@@ -217,7 +218,7 @@ export default function Page() {
         {
           question: "O que é a Marca da Bollo?",
           answer:
-            "É um selo fiscal (taxa) que o governo italiano exige para validar documentos oficiais. O valor não vai para o tradutor, mas sim para o Estado, e é obrigatório em toda traduzione asseverata.",
+            "É um selo fiscal usado em muitos procedimentos de asseverazione. A quantidade e eventuais isenções dependem do documento e das regras do órgão competente.",
         },
         {
           question: "Vocês traduzem CNH para motoristas?",

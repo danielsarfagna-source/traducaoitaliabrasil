@@ -177,17 +177,19 @@ export function HeroVideo() {
       {/* Conteúdo da hero */}
       <div className="hero__content">
         <span className="hero__tag">
-          Tradução Juramentada · Rápido (24–48h) · Aceitamos PIX
+          Tradução juramentada · Atendimento em português · Orçamento pelo WhatsApp
         </span>
 
+        {/* TAREFA 3 — H1 passa a conter o termo de nicho "juramentada português → italiano".
+            Apenas o texto foi ajustado; markup, classes (<em>/hero__title-sub) e estilo intactos. */}
         <h1 className="hero__title">
-          Seu documento traduzido <em>certo</em>
+          Tradução juramentada português → italiano, feita <em>certo</em>
           <span className="hero__title-sub">— sem retrabalho, sem perder prazo.</span>
         </h1>
 
         <p className="hero__sub">
-          Tradução juramentada oficial para a Itália — CNH, diplomas,
-          certidões, permesso di soggiorno, cidadania e mais. Aceita em toda a Itália.
+          Tradução de documentos brasileiros para italiano: CNH, diplomas,
+          certidões, permesso di soggiorno, cidadania e mais.
           Do primeiro contato até a entrega, tudo resolvido em português.
         </p>
 

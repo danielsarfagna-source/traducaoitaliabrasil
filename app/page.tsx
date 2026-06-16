@@ -2,20 +2,19 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { CTASection } from "./components/cta-section";
 import { FAQAccordion } from "./components/faq-accordion";
-import { Footer } from "./components/footer";
 import { HeroVideo } from "./components/hero-video";
 import { SectionTitle } from "./components/section-title";
 import { ServiceCard } from "./components/service-card";
-import { SiteHeader } from "./components/site-header";
 import { Testimonials } from "./components/testimonials";
 import { WhatsAppButton } from "./components/whatsapp-button";
 import { faqItems, serviceCards } from "./lib/content";
 import { siteUrl } from "./lib/site";
 
+// TAREFA 3 — title alinhado ao nicho (juramentada + português italiano + Brasil–Itália)
 const homepageTitle =
-  "Tradução Juramentada Brasil-Itália | Documentos Brasileiros na Itália";
+  "Tradução Juramentada Português Italiano | Brasil–Itália";
 const homepageDescription =
-  "Atendimento em português: traduza CNH, certidões, diplomas e documentos brasileiros para uso na Itália. Orçamento pelo WhatsApp e preço justo.";
+  "Tradução de documentos brasileiros para uso oficial na Itália. Atendimento em português para brasileiros na Itália, com orientação sobre tradução asseverata, apostila e documentos civis.";
 
 export const metadata: Metadata = {
   title: {
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
     title: homepageTitle,
     description: homepageDescription,
     url: siteUrl,
-    siteName: "TraducaoBrasilItalia",
+    siteName: "Tradução Brasil Itália",
     images: ["/assets/hero-professional-wide.png"],
     locale: "pt_BR",
     type: "website",
@@ -220,10 +219,10 @@ function AboutPreview() {
   return (
     <section className="bg-[#020817] px-5 py-20 sm:px-8 lg:px-12">
       <div className="mx-auto grid max-w-[1180px] gap-8 rounded-[8px] border border-[#d8a84f]/34 bg-[#07111f]/72 p-8 md:grid-cols-[0.8fr_1.2fr] md:p-10">
-        <SectionTitle align="left" eyebrow="Quem somos" title="Especialistas em tradução juramentada Brasil ↔ Itália" />
-        <div className="space-y-5 text-lg leading-8 text-[#f8f5ee]/76">
-          <p>Somos um serviço especializado em tradução juramentada para a Itália — e orientação documental para brasileiros na Itália, brasileiros no Brasil e pessoas que precisam usar documentos entre Brasil, Itália e exterior.</p>
-          <p>Nosso foco é oferecer um atendimento claro, rápido e seguro, evitando que o cliente perca tempo com exigências incorretas, documentos incompletos ou traduções inadequadas para a finalidade desejada.</p>
+        <SectionTitle align="left" eyebrow="Quem somos" title="Especialistas em documentos brasileiros para uso na Itália" />
+        <div className="space-y-5 text-lg leading-8 text-[#f8f5ee]/76 text-justify">
+          <p>A Tradução Brasil Itália é um serviço especializado em tradução de documentos brasileiros para uso oficial na Itália. O atendimento é feito em português, com foco em brasileiros que vivem na Itália ou precisam apresentar documentos brasileiros perante órgãos italianos.</p>
+          <p>O serviço auxilia na tradução de certidões, CNH, antecedentes criminais, diplomas, procurações e outros documentos civis, além de orientar sobre apostila, asseverazione e exigências comuns do órgão destinatário.</p>
           <Link href="/quem-somos" className="inline-block text-sm font-bold uppercase tracking-[0.12em] text-[#d8a84f]">Conhecer o serviço</Link>
         </div>
       </div>
@@ -287,17 +286,29 @@ function PriceSection() {
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Tradução Juramentada Português Italiano",
+    "@type": "WebPage",
+    "@id": `${siteUrl}/#webpage`,
     url: siteUrl,
-    areaServed: "Itália",
-    serviceType: "Tradução juramentada e apostilamento",
+    name: homepageTitle,
+    description: homepageDescription,
+    inLanguage: "pt-BR",
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#service` },
+  };
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.slice(0, 6).map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
   };
 
   return (
     <main className="min-h-screen bg-[#020912] text-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <SiteHeader />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c") }} />
       <HeroVideo />
       <Testimonials />
       <ServiceBar />
@@ -312,7 +323,6 @@ export default function Home() {
         title="Me manda só uma foto do documento."
         text="Em poucos minutos eu te digo se serve, quanto custa e o prazo. Sem compromisso."
       />
-      <Footer />
     </main>
   );
 }
