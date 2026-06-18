@@ -5,6 +5,7 @@ import { serializeJsonLd } from "./lib/seo";
 import { siteUrl } from "./lib/site";
 import { SiteHeader } from "./components/site-header";
 import { Footer } from "./components/footer";
+import { GoogleAdsTag } from "./components/google-ads-tag";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -138,6 +139,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="antialiased bg-[#020912] text-white">
+        <GoogleAdsTag />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: serializeJsonLd(globalJsonLd) }}
