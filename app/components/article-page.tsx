@@ -146,6 +146,18 @@ export function ArticlePage({
       { "@type": "ListItem", position: 2, name: title, item: pageUrl ?? siteUrl },
     ],
   };
+  const webPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${pageUrl ?? siteUrl}#webpage`,
+    url: pageUrl ?? siteUrl,
+    name: title,
+    description:
+      description || (typeof intro === "string" ? intro : "Orientação e tradução de documentos entre Brasil e Itália."),
+    inLanguage: pageLanguage,
+    isPartOf: { "@id": `${siteUrl}/#website` },
+    about: { "@id": `${siteUrl}/#service` },
+  };
   const pageDescription =
     description || (typeof intro === "string" ? intro : "Orientação e tradução juramentada para documentos entre Brasil e Itália.");
   const pageJsonLd =
@@ -160,8 +172,8 @@ export function ArticlePage({
           dateModified,
           ...(pageUrl ? { url: pageUrl, mainEntityOfPage: pageUrl } : {}),
           inLanguage: pageLanguage,
-          author: { "@type": "Organization", "@id": `${siteUrl}/#service`, name: "TraducaoBrasilItalia" },
-          publisher: { "@id": `${siteUrl}/#service` },
+          author: { "@type": "Organization", "@id": `${siteUrl}/#organization`, name: "Tradução Brasil Itália" },
+          publisher: { "@id": `${siteUrl}/#organization` },
         }
       : schemaType
         ? {
@@ -180,7 +192,7 @@ export function ArticlePage({
                     containedIn: { "@type": "AdministrativeArea", name: "Lazio" },
                   },
                   knowsLanguage: ["pt-BR", "it-IT"],
-                  parentOrganization: { "@id": `${siteUrl}/#service` },
+                  parentOrganization: { "@id": `${siteUrl}/#organization` },
                 }
               : {
                   serviceType,
@@ -192,7 +204,7 @@ export function ArticlePage({
                         ]
                       : { "@type": areaServed === "Roma" ? "City" : "Country", name: areaServed },
                   availableLanguage: ["Portuguese", "Italian"],
-                  provider: { "@id": `${siteUrl}/#service` },
+                  provider: { "@id": `${siteUrl}/#organization` },
                   audience: {
                     "@type": "Audience",
                     audienceType:
@@ -208,6 +220,7 @@ export function ArticlePage({
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(faqJsonLd) }} />
       ) : null}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(webPageJsonLd) }} />
       {pageJsonLd ? <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(pageJsonLd) }} /> : null}
       {children}
       <section className="relative overflow-hidden border-b border-[#c99a45]/25 px-5 pb-16 pt-36 sm:px-8 lg:px-12">
@@ -219,7 +232,7 @@ export function ArticlePage({
           <h1 className="mt-6 font-serif text-5xl leading-[1.1] text-white sm:text-6xl md:text-7xl">
             {title}
           </h1>
-          <p className="mt-8 max-w-3xl text-xl leading-relaxed text-white/80">
+          <p className="mt-8 max-w-3xl text-xl leading-relaxed text-white/80 text-justify">
             {typeof renderedIntro === "string" ? renderInlineMarkup(renderedIntro) : renderedIntro}
           </p>
           {heroCTA && (
@@ -254,7 +267,7 @@ export function ArticlePage({
                 >
                   <h2 className="font-serif text-3xl text-white">{section.title}</h2>
                   {section.body.map((paragraph, i) => (
-                    <div key={i} className="mt-5 text-lg leading-8 text-white/76">
+                    <div key={i} className="mt-5 text-lg leading-8 text-white/76 text-justify">
                       {typeof paragraph === "string" ? renderInlineMarkup(paragraph) : paragraph}
                     </div>
                   ))}
@@ -280,7 +293,7 @@ export function ArticlePage({
                     >
                       <h3 className="font-serif text-2xl text-white">{subsection.title}</h3>
                       {subsection.body.map((paragraph, i) => (
-                        <div key={i} className="mt-4 text-lg leading-8 text-white/76">
+                        <div key={i} className="mt-4 text-lg leading-8 text-white/76 text-justify">
                           {typeof paragraph === "string" ? renderInlineMarkup(paragraph) : paragraph}
                         </div>
                       ))}
@@ -294,7 +307,7 @@ export function ArticlePage({
                           ))}
                         </ul>
                       ) : null}
-                      {(subsection as any).subsubsections?.map((subsub: ContentBlock) => (
+                      {subsection.subsubsections?.map((subsub) => (
                         <div
                           key={subsub.title}
                           id={subsub.title.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "-").replace(/[^\w-]/g, "")}
@@ -302,7 +315,7 @@ export function ArticlePage({
                         >
                           <h4 className="font-serif text-xl text-[#d9aa52]">{subsub.title}</h4>
                           {subsub.body.map((paragraph, i) => (
-                            <div key={i} className="mt-3 text-lg leading-8 text-white/76">
+                            <div key={i} className="mt-3 text-lg leading-8 text-white/76 text-justify">
                               {typeof paragraph === "string" ? renderInlineMarkup(paragraph) : paragraph}
                             </div>
                           ))}

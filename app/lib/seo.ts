@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { siteUrl } from "./site";
 
-const defaultOgImage = "/assets/hero-professional-wide.png";
-
 type PageMetadataOptions = {
   title: string;
   description: string;
@@ -23,6 +21,7 @@ export function createPageMetadata({
   languages,
 }: PageMetadataOptions): Metadata {
   const url = `${siteUrl}${path}`;
+  const ogImage = `/og/${path.slice(1)}.png`;
   const languageAlternates = languages
     ? Object.fromEntries(
         Object.entries(languages).map(([language, languagePath]) => [
@@ -50,12 +49,12 @@ export function createPageMetadata({
       title: ogTitle,
       description: ogDescription,
       url,
-      siteName: "TraducaoBrasilItalia",
+      siteName: "Tradução Brasil Itália",
       type: "article",
       locale,
       images: [
         {
-          url: defaultOgImage,
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: ogTitle,
@@ -66,7 +65,7 @@ export function createPageMetadata({
       card: "summary_large_image",
       title: ogTitle,
       description: ogDescription,
-      images: [defaultOgImage],
+      images: [ogImage],
     },
     robots: {
       index: true,

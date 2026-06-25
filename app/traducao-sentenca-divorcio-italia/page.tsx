@@ -1,56 +1,94 @@
 import type { Metadata } from "next";
 import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
-import Link from "next/link";
 
 const pagePath = "/traducao-sentenca-divorcio-italia";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Tradução de Sentença de Divórcio para Itália | Homologação",
-  description: "Precisa traduzir sentença de divórcio para a Itália? Saiba como funciona a tradução juramentada de petição inicial, ata de audiência e trânsito em julgado.",
-  path: "/traducao-sentenca-divorcio-italia",
+  title: "Tradução juramentada de sentença de divórcio brasileira para a Itália",
+  description:
+    "Tradução juramentada de sentenças de divórcio e escrituras públicas para reconhecimento no Comune italiano (trascrizione). Texto integral e trânsito em julgado.",
+  path: pagePath,
+  ogTitle: "Tradução de divórcio brasileiro para uso na Itália",
+  ogDescription: "Guia técnico sobre tradução de sentenças judiciais e escrituras de cartório para atualização do estado civil na Itália.",
 });
 
 export default function Page() {
   return (
     <ArticlePage
       pagePath={pagePath}
-      eyebrow="Legal / Judicial"
+      eyebrow="Jurídico"
       title="Tradução juramentada de sentença de divórcio para a Itália"
-      intro="O divórcio realizado no Brasil não tem efeito automático na Itália. Para que um cidadão brasileiro ou ítalo-brasileiro possa casar novamente na Itália ou atualizar seu estado civil no Comune (ANAGRE), é obrigatório apresentar a sentença de divórcio devidamente traduzida por um tradutor juramentado e apostilada."
+      schemaType="Service"
+      areaServed="Brasil e Itália"
+      serviceType="Tradução juramentada de documentos judiciais"
+      description="Tradução técnica e juramentada de sentenças e escrituras de divórcio para validade legal perante as autoridades italianas."
+      intro="Divórcios realizados no Brasil, seja por via judicial ou extrajudicial (em cartório), não produzem efeitos automáticos na Itália. Regido pelos princípios de direito internacional privado e pelo **Decreto 132/2014** (para simplificação administrativa), o reconhecimento exige que a sentença brasileira seja traduzida de forma juramentada e transcrita (trascrizione) no Ufficio Stato Civile do Comune competente."
       sections={[
-      {
-        title: "Quais partes do processo devem ser traduzidas?",
-        body: [
-          "Diferente de uma certidão de nascimento, o divórcio é um processo judicial composto por várias peças. A autoridade italiana (Comune ou Tribunal) geralmente exige a tradução das seguintes partes críticas:",
-        ],
-        list: [
-          "Petição Inicial (Citazione).",
-          "Ata de Audiência (Verbale di Udienza).",
-          "Sentença Judicial (Sentenza).",
-          "Certidão de Trânsito em Julgado (Passaggio in giudicato) - Documento que prova que não há mais recurso.",
-          "Averbação no Cartório de Registro Civil."
-        ]
-      },
-      {
-        title: "Homologação de Sentença na Itália",
-        body: [
-          "Muitos clientes perguntam se precisam de um advogado italiano para homologar o divórcio. Em muitos casos, se o divórcio foi consensual e seguiu os ritos legais, a atualização pode ser feita administrativamente no Comune através da tradução juramentada asseverada. Caso contrário, será necessário um processo judicial.",
-          <span key="link">Confira também os requisitos para <Link href="/traducao-juramentada-certidao-casamento-obito-italia" className="text-[#d9aa52] underline hover:text-white transition-colors">certidões de casamento</Link> com averbação.</span>
-        ]
-      },
-      {
-        title: "Dica Técnica: Divórcio Extrajudicial (Cartório)",
-        body: [
-          "Se o seu divórcio foi feito diretamente em cartório (Escritura Pública), o processo é muito mais simples e barato. A tradução será apenas da escritura e da respectiva certidão de casamento averbada. Este documento também exige Apostila de Haia."
-        ]
-      }
-    ]}
+        {
+          title: "Quais partes do processo devem ser traduzidas?",
+          body: [
+            "Para o reconhecimento do divórcio na Itália, não basta traduzir apenas o dispositivo da sentença. O Comune exige o conjunto documental que comprove o respeito ao contraditório e o encerramento definitivo da lide.",
+          ],
+          subsections: [
+            {
+              title: "Sentença Judicial Completa",
+              body: [
+                "Inclui a petição inicial, a ata de audiência (se houver), a sentença fundamentada e, obrigatoriamente, a certidão de trânsito em julgado (quando não cabe mais recurso). O termo italiano para trânsito em julgado é 'passaggio in giudicato'.",
+              ],
+            },
+            {
+              title: "Divórcio em Cartório (Escritura Pública)",
+              body: [
+                "Divórcios consensuais sem filhos menores podem ser feitos por escritura pública no Brasil. Neste caso, traduz-se a escritura integral, que deve estar devidamente apostilada.",
+              ],
+            },
+          ],
+        },
+        {
+          title: "A Homologação de Sentença vs. Transcrição Direta",
+          body: [
+            "Antigamente, todo divórcio estrangeiro passava por um processo judicial de 'delibazione' perante a Corte d'Appello na Itália. Atualmente, divórcios que cumprem requisitos específicos (como o mútuo consentimento e a ausência de filhos menores com questões pendentes) podem ser transcritos diretamente pelo oficial do Comune, desde que apresentados com a tradução juramentada asseverata.",
+          ],
+        },
+        {
+          title: "Apostila de Haia e Ordem dos Atos",
+          body: [
+            "A sequência obrigatória para validade na Itália: (1) Obtenção da cópia autenticada do processo judicial ou da escritura original; (2) Apostilamento em cartório no Brasil; (3) Tradução juramentada; (4) Asseverazione no Tribunale italiano (se a tradução for feita na Itália).",
+          ],
+        },
+        {
+          title: "Por que a tradução técnica é crucial?",
+          body: [
+            "Termos como 'guarda compartilhada', 'alimentos' e 'partilha de bens' possuem equivalentes exatos no direito de família italiano. Uma tradução imprecisa pode gerar dúvidas no oficial do Comune sobre o cumprimento da ordem pública italiana, travando o registro do novo estado civil por meses.",
+          ],
+        },
+      ]}
       faqs={[
-      { question: "Quanto custa a tradução de um divórcio?", answer: "Como sentenças judiciais podem ter muitas páginas, o valor é calculado por lauda juramentada. Fazemos uma análise prévia para traduzir apenas o essencial exigido pela lei italiana." },
-      { question: "Quanto tempo demora?", answer: "Sentenças são textos densos e técnicos. O prazo médio é de 7 a 12 dias úteis." },
-      { question: "Preciso traduzir o processo inteiro de 100 páginas?", answer: "Geralmente não. Traduzimos apenas as peças principais mencionadas acima (Petição, Ata, Sentença e Trânsito em Julgado)." }
-    ]}
+        {
+          question: "Preciso traduzir o processo de divórcio inteiro?",
+          answer: "O Comune geralmente exige as 'peças principais': petição inicial, sentença e trânsito em julgado. No caso de escritura pública de cartório, traduz-se o documento inteiro.",
+        },
+        {
+          question: "Quanto tempo demora para transcrever o divórcio no Comune?",
+          answer: "Após a entrega da tradução juramentada, o Comune leva em média de 30 a 90 dias para processar a trascrizione e atualizar a certidão de casamento italiana.",
+        },
+        {
+          question: "Posso traduzir divórcio com filhos menores?",
+          answer: "Sim, mas a tradução deve ser extremamente detalhada quanto às cláusulas de guarda e visitação, para que a autoridade italiana verifique se os direitos do menor foram preservados conforme a lei.",
+        },
+        {
+          question: "A tradução de divórcio é mais cara que uma certidão?",
+          answer: "Sim, devido ao volume de texto e à complexidade da terminologia jurídica. O orçamento é feito por lauda traduzida.",
+        },
+      ]}
+      relatedTitle="Material Relacionado"
+      relatedLinks={[
+        { title: "Tradução juramentada de certidões", href: "/traducao-juramentada-certidoes" },
+        { title: "Documentos para casamento na Itália", href: "/traducao-documentos-casamento-italia" },
+        { title: "Autoridades italianas — guia de referência", href: "/autoridades-italianas-documentos-brasileiros" },
+        { title: "Glossário da tradução juramentada", href: "/glossario-traducao-juramentada" },
+      ]}
     />
   );
 }

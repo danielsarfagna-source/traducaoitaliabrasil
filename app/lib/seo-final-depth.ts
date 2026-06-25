@@ -1,0 +1,93 @@
+import type { SeoSupplement } from "./seo-supplements";
+
+const depth = (title: string, body: string[]): SeoSupplement[] => [{ title, body }];
+
+export const seoFinalDepth: Record<string, SeoSupplement[]> = {
+  "/apostilar-documento-italiano-na-italia": depth("Perguntas para a autoridade apostilante", [
+    "Antes do protocolo, pergunte se a assinatura está depositada, qual via é apta ao exterior, se existe validação anterior e como a Apostila será vinculada. Confirme também atendimento por delega, envio postal, quantidade de documentos por pedido e forma de retirada. Registre nome do serviço e data da orientação.",
+    "Para documento eletrônico, verifique se a autoridade aceita o arquivo nativo, uma impressão verificável ou cópia autenticada. QR code e assinatura digital não devem ser cortados. A tradução parte da mesma versão efetivamente apostilada.",
+    "Guarde recibo, protocolo e cópia integral para demonstrar onde e quando a certificação foi emitida.",
+  ]),
+  "/traducao-cnh-dirigir-na-italia": depth("Perguntas para a Motorizzazione", [
+    "Confirme se sua categoria está abrangida, qual data de residência será usada, qual modalidade de tradução é aceita, se existe verificação consular e como ocorre a entrega da CNH brasileira. Pergunte também sobre certificado médico, fotografias, taxas, agendamento e documento provisório.",
+    "Anote protocolo, funcionário ou canal oficial e data da resposta. Se a instrução mudar antes da apresentação, siga a versão vigente. Leve uma cópia da orientação quando houver particularidade sobre categoria, restrição ou data de emissão.",
+    "Pergunte ainda se a unidade exige entrega da carteira original no protocolo ou somente na conclusão. Essa informação define como organizar deslocamento, trabalho e eventual período sem documento físico disponível.",
+  ]),
+  "/dichiarazione-di-valore-traducao-diploma": depth("Planejamento de uma candidatura acadêmica", [
+    "Crie uma tabela com documento, emissor, assinatura, Apostila, tradução, validade e destino. Marque o que pertence ao consulado, ao CIMEA e à universidade. Essa separação impede enviar um pedido incompleto ou pagar duas vezes pelo mesmo serviço.",
+    "Leia requisitos linguísticos, calendário, formato de upload e regras para originais. Algumas instituições analisam primeiro cópias digitais e pedem o fascículo físico na matrícula. Outras exigem verificação anterior. A tradução deve estar pronta no formato aceito pelo portal.",
+    "Quando houver prazo de candidatura, considere emissão universitária no Brasil, reconhecimento de assinaturas, Apostila, tradução e envio. Solicitar documento na última semana não transfere à instituição italiana a obrigação de aceitar integração tardia.",
+    "Verifique também formato do nome no cadastro da universidade, código do curso, ano acadêmico e língua aceita para cada anexo. O mesmo documento pode ser solicitado em upload separado do original, da Apostila e da tradução.",
+    "Para transferência ou reconhecimento de créditos, prepare programas oficiais das disciplinas efetivamente avaliadas. Identifique semestre, carga prática, estágio e método de avaliação. A comissão precisa localizar essas informações sem reconstruir o currículo a partir de arquivos desordenados.",
+    "Após a matrícula, preserve o dossiê porque ele pode ser reutilizado em bolsa, residência estudantil, estágio ou inscrição profissional, desde que o novo destinatário aceite a mesma formalização e os documentos continuem atuais.",
+    "Se houver documento em mais de um idioma, confirme qual versão a instituição considera oficial. Traduza a via assinada e apostilada, mantendo selos, legendas e páginas de autenticação.",
+  ]),
+  "/documentos-traducao-permesso-di-soggiorno": depth("Checklist pessoal para o pedido", [
+    "Monte uma folha de controle com categoria, data de vencimento do título atual, prazo de envio, documentos italianos, documentos brasileiros, Apostilas e traduções. Inclua passaporte, codice fiscale, residência, fotografias e comprovantes específicos. Marque original e cópia separadamente.",
+    "Confira se o endereço do recibo corresponde à residência e se nome e número do passaporte estão corretos. Um passaporte renovado durante o processo precisa ser comunicado com cópia do anterior quando solicitado.",
+    "No dia da Questura, chegue com a pasta ordenada na sequência do kit. Não entregue o único original sem saber como será devolvido. Guarde recibo de qualquer documento retido e acompanhe a prática pelo canal oficial.",
+    "Se a categoria permite trabalho, estudo ou reunião familiar durante a espera, confirme quais direitos decorrem do recibo e quais documentos devem acompanhar a pessoa. Não trate o comprovante postal como equivalente universal ao cartão emitido.",
+    "Ao mudar de província, informe-se sobre transferência da prática e competência da nova Questura. Endereço desatualizado impede recebimento de convocação ou comunicação. Atualize Anagrafe, correio e contatos usados no pedido.",
+    "Para familiares que chegam depois, não reutilize automaticamente a pasta do requerente principal. Cada pessoa possui passaporte, certidão, idade e condição próprias. Organize um conjunto individual ligado ao procedimento familiar comum.",
+    "Na renovação, compare o motivo atual com o título anterior. Mudança de estudo para trabalho, de família para trabalho ou outra conversão segue requisitos próprios e não é simples repetição do kit anterior. Confirme se o pedido é renovação, aggiornamento, duplicato ou conversione.",
+    "Guarde cópia da tessera sanitaria, residência, contrato e comunicações relevantes, mas anexe somente o que a categoria exige. Excesso de papéis não compensa ausência do documento central.",
+    "Antes de fechar o envelope, releia a lista oficial linha por linha e marque cada anexo. Confira datas, assinaturas, tradução e Apostila. Uma revisão simples evita que a Questura peça integração de documento que já poderia acompanhar o protocolo inicial.",
+    "Revise tudo novamente.",
+  ]),
+  "/reforma-cidadania-italiana-documentos": depth("Checklist de decisão antes de traduzir", [
+    "Defina a norma e a hipótese usada, o marco temporal do pedido, o grau do ascendente e a prova de cidadania ou residência. Peça ao advogado uma lista final de documentos. Somente depois emita novas certidões, Apostilas e traduções.",
+    "Separe fatos confirmados de questões ainda sob análise. Uma pasta pode comprovar parentesco e continuar sem prova suficiente da exceção legal. Traduzir mais certidões da linha não substitui certificado de naturalização, cidadania exclusiva ou residência histórica.",
+    "Revise a fonte oficial na data do protocolo. Salve lei, circular ou decisão utilizada e registre a data. Atualizações futuras devem alterar texto, `dateModified` e referências ao mesmo tempo.",
+    "Identifique quem era cidadão italiano em cada nascimento da linha e quais outras cidadanias possuía. Registre a fonte documental de cada resposta. Essa análise evita atribuir automaticamente ao ascendente uma condição que o certificado não demonstra.",
+    "Para menores e filhos nascidos após a reforma, verifique as regras específicas de aquisição, declaração e prazos. Não aplique mecanicamente o percurso usado por adulto que reconstrói uma linha histórica.",
+    "Quando a família possui processos em países ou sedes diferentes, compare foro, consulado, Comune e data de protocolo. Uma decisão favorável de um parente não prova automaticamente a situação dos demais.",
+    "Traduções antigas continuam representando os documentos antigos, mas a autoridade pode exigir nova certidão ou formalidade. Confirme antes de reaproveitar uma pasta produzida sob instruções anteriores à Lei 74/2025.",
+    "Crie um índice numerado do fascículo e associe cada documento ao fato que pretende provar. Essa organização permite ao advogado identificar rapidamente parentesco, cidadania exclusiva, residência, naturalização e marco temporal.",
+    "Quando uma certidão estrangeira usa calendário, localidade ou sistema registral diferente, preserve a informação original e forneça tradução clara. Não simplifique o dado histórico para encaixá-lo na hipótese legal.",
+  ]),
+  "/traducao-documentos-casamento-italia": depth("Perguntas finais ao Comune", [
+    "Confirme modalidade da certidão, atualidade, Nulla Osta, legalização, tradução, intérprete, pubblicazioni e documentos de divorciado ou viúvo. Pergunte se ambos os nubentes precisam comparecer em cada etapa e quais originais serão retidos.",
+    "Registre data de emissão e validade de cada ato. Organize o cronograma para que certidões e Nulla Osta permaneçam atuais até a celebração. Mantenha cópias completas para o registro posterior no Brasil.",
+    "Confirme por escrito a grafia que será usada no ato e apresente documentos que expliquem sobrenomes diferentes. Essa verificação evita correção posterior da certidão italiana.",
+  ]),
+  "/traducao-antecedentes-criminais-italia": depth("Abrangência territorial dos antecedentes", [
+    "Liste países e estados onde a pessoa residiu dentro do período pedido. A autoridade pode exigir certificados de mais de uma jurisdição. O documento brasileiro não informa fatos ocorridos na Itália ou em terceiro país.",
+    "Quando há várias certidões, use a mesma grafia e documento de identificação em todas. Diferença de sobrenome deve ser ligada por certidão civil. Planeje validade, Apostila e tradução como um único calendário.",
+    "Apresente cada certificado com sua validação e Apostila. Não una páginas de emissores diferentes como se fossem um único ato. A tradução identifica claramente órgão, alcance e resultado de cada documento.",
+    "Confira se a certidão foi emitida para pessoa física, finalidade correta e jurisdição pedida. Alguns portais oferecem certidões cíveis, eleitorais ou militares próximas da opção criminal; selecionar documento errado só aparece quando a autoridade italiana analisa a pasta.",
+    "Para cidadania ou adoção, a lista pode abranger países de residência anteriores. Solicite orientação sobre período mínimo de permanência que gera obrigação documental e sobre certificados de país onde a emissão depende de presença ou procuração.",
+  ]),
+  "/traducao-documentos-medicos-italia": depth("Seleção do conteúdo necessário", [
+    "Pergunte ao médico, hospital, seguradora ou autoridade quais períodos e documentos são relevantes. Um resumo clínico recente pode acompanhar exames históricos sem exigir tradução integral de anotações administrativas repetidas.",
+    "Para reconhecimento profissional, use apenas programas oficiais e certificados emitidos pela instituição. Material de aluno, slides e páginas não assinadas não substituem ementas certificadas. Confirme a lista antes da Apostila.",
+    "Revise nomes de medicamentos, alergias, unidades e datas com atenção especial. O paciente ou profissional deve comunicar qualquer erro no original ao emissor; o tradutor não corrige informação clínica por suposição.",
+    "Em emergência ou continuidade imediata de tratamento, priorize resumo clínico, alergias, medicação atual e exames decisivos. Documentação histórica complementar pode seguir depois conforme orientação do serviço italiano.",
+    "Para seguro ou perícia, preserve datas de início, incapacidade, alta e relação causal exatamente como declaradas. A tradução não transforma atestado assistencial em laudo pericial nem amplia o período certificado.",
+    "Antes da entrega, confira identificação do paciente em todas as páginas e se cada exame pertence ao mesmo caso. Documento sem nome ou com página trocada deve ser regularizado pelo emissor.",
+    "Mantenha uma cópia integral do conjunto entregue e registre a finalidade indicada pelo destinatário.",
+    "Proteja também os anexos.",
+  ]),
+  "/traducao-contratos-imoveis-italia": depth("Coordenação com notaio, banco e advogado", [
+    "Envie o rascunho ao profissional responsável antes de formalizar procurações brasileiras. O notaio define poderes, identificação do imóvel, representação e forma do ato. Alterar o texto depois da Apostila exige nova formalização.",
+    "O banco pode pedir origem de recursos, renda, residência fiscal e identificação. Traduza somente documentos solicitados e preserve extratos, titulares e moeda. O tradutor não emite declaração financeira.",
+    "Antes do rogito, compare proposta, preliminar, procuração e ato definitivo. Partes, imóvel, preço, prazo e poderes precisam permanecer coerentes. Divergência deve ser resolvida pelos profissionais da transação.",
+    "Se o comprador atua por sociedade brasileira, confirme existência, representação e deliberação que autoriza a operação. O notaio pode exigir certidões recentes e identificação do beneficiário efetivo, todas formalizadas para uso na Itália.",
+    "Em herança ou doação, estado civil, parentesco e origem da propriedade exigem documentos adicionais. Não reutilize a pasta de uma compra comum sem validar a natureza gratuita ou sucessória do ato.",
+    "Guarde a versão assinada de cada contrato e a tradução correspondente. Rascunhos posteriores com cláusulas alteradas exigem nova conferência antes do uso oficial.",
+  ]),
+  "/traduzione-asseverata-portoghese-italiano": depth("Informazioni da comunicare al traduttore", [
+    "Indicare ente destinatario, città, finalità, termine e modalità richiesta. Allegare istruzioni ufficiali, documento completo e Apostille. Per sentenze, procure e diplomi, includere tutti gli allegati citati.",
+    "Comunicare eventuali divergenze di nome senza chiedere di correggerle nella traduzione. La soluzione appartiene all'autorità che ha emesso l'atto o al professionista responsabile del procedimento.",
+    "Indicare se il fascicolo sarà consegnato fisicamente, caricato su portale o inviato a un professionista. Formato, ordine e numero di copie vengono definiti prima dell'asseverazione.",
+  ]),
+  "/traduzione-giurata-portoghese-italiano-roma": depth("Checklist per il cliente a Roma", [
+    "Verificare Municipio, ufficio, appuntamento e validità dei certificati. Inviare scansioni complete e mantenere gli originali nell'ordine dell'Apostille. Comunicare subito qualsiasi nuova emissione o correzione.",
+    "Concordare consegna, asseverazione e restituzione prima di spedire. Per pratiche urgenti, il termine viene valutato insieme alla disponibilità dell'ufficio; non viene promesso un deposito senza conferma.",
+    "Al ricevimento, controllare fascicolo, verbale, timbri e numero di pagine. Presentare l'insieme senza separarlo e conservare una copia digitale integrale.",
+    "Per Comune e Stato Civile, verificare il Municipio competente e la prenotazione. Per Tribunale, seguire le indicazioni dell'avvocato. Per Questura, rispettare categoria e convocazione. Per università, allegare il bando o la richiesta dell'ateneo.",
+    "Certificati brasiliani devono essere emessi nella versione corretta prima dell'Apostille. Annotazioni di divorzio, rettifica e cambio di nome entrano integralmente nella traduzione e non possono essere omesse per abbreviare il fascicolo.",
+    "Chi vive nei Castelli Romani, sul litorale o in altra provincia del Lazio comunica il proprio ente locale. L'asseverazione a Roma non sostituisce la verifica delle istruzioni territoriali del destinatario.",
+    "Per documenti accademici, allegare richiesta dell'ateneo; per patente, indicare Motorizzazione e data di residenza; per permesso, specificare categoria; per cittadinanza, seguire l'elenco del Comune o dell'avvocato.",
+    "Nomi, date e annotazioni vengono confrontati prima della stampa. Se emerge una divergenza, il cliente riceve segnalazione e decide con l'autorità competente se occorre rettifica o prova complementare.",
+  ]),
+};

@@ -57,7 +57,6 @@ export default function Page() {
         { title: "Tradução para cidadania italiana", href: "/traducao-juramentada-para-cidadania-italiana" },
         { title: "Tradução de CNH brasileira", href: "/traducao-cnh-dirigir-na-italia" },
         { title: "Tradução de certidões", href: "/traducao-juramentada-certidoes" },
-        { title: "Preço da tradução juramentada", href: "/preco-traducao-juramentada-portugues-italiano" },
       ]}
     />
   );

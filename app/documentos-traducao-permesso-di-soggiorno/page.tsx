@@ -1,94 +1,104 @@
 import type { Metadata } from "next";
-import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
+import { createPageMetadata } from "../lib/seo";
+
+const pagePath = "/documentos-traducao-permesso-di-soggiorno";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Tradução de Documentos para Permesso di Soggiorno",
-  description: "Tradução juramentada de documentos brasileiros para permesso di soggiorno, Questura, motivos familiares, estudo, trabalho e renovação na Itália.",
-  path: "/documentos-traducao-permesso-di-soggiorno",
+  title: "Documentos e tradução juramentada para Permesso di Soggiorno | Guia Técnico",
+  description:
+    "Tradução juramentada para Permesso di Soggiorno: certidões, contratos e antecedentes criminais. Exigências da Questura e kit postale das Poste Italiane.",
+  path: pagePath,
+  ogTitle: "Permesso di Soggiorno na Itália — documentos e traduções",
+  ogDescription:
+    "Quais documentos brasileiros precisam de tradução juramentada para o pedido de permanência legal na Itália.",
 });
 
 export default function Page() {
   return (
     <ArticlePage
-      eyebrow="Permesso di Soggiorno"
-      title="Documentos e traduções para o permesso di soggiorno na Itália"
-      pagePath="/documentos-traducao-permesso-di-soggiorno"
+      pagePath={pagePath}
+      eyebrow="Imigração"
+      title="Documentos e tradução juramentada para Permesso di Soggiorno"
       schemaType="Service"
-      description="Serviço de tradução juramentada de documentos brasileiros para permesso di soggiorno na Itália."
-      intro="O permesso di soggiorno é o documento que sustenta a vida legal do brasileiro não europeu na Itália — e ele volta a cada renovação. Boa parte dos pedidos atrasa não pela imigração em si, mas por documento brasileiro entregue sem a tradução juramentada correta. Saber disso antes economiza meses."
+      areaServed="Itália"
+      serviceType="Tradução juramentada para fins de imigração"
+      description="Tradução juramentada de documentos brasileiros exigidos pela Questura para a emissão do permesso di soggiorno."
+      intro="O Permesso di Soggiorno é a autorização de permanência obrigatória para cidadãos não europeus que residem na Itália por mais de 90 dias. Seja por motivos de trabalho, estudo, família ou espera de cidadania, a apresentação de documentos brasileiros exige a tradução juramentada asseverata para que as informações tenham validade perante a Questura e o Ministero dell'Interno."
       sections={[
         {
-          title: "O que é e por que a tradução importa",
+          title: "Quando a tradução juramentada é obrigatória para o Permesso",
           body: [
-            "O permesso di soggiorno é a autorização de permanência na Itália para quem não é cidadão da União Europeia. Ele tem motivos diferentes — trabalho, estudo, família, espera de cidadania, entre outros — e cada motivo pede um conjunto de documentos. Quando esse conjunto inclui documento brasileiro (certidões, comprovações de vínculo, antecedentes), em regra ele precisa chegar traduzido para o italiano por tradutor juramentado, muitas vezes apostilado.",
-            "A imigração italiana trabalha com prazos e exigências formais. Um documento brasileiro sem tradução adequada não é 'resolvido na hora': ele gera exigência, e exigência significa novo prazo, nova ida ao balcão e, às vezes, risco para a regularidade da permanência.",
+            "Toda vez que a comprovação do direito à permanência depender de um fato ocorrido no Brasil, o oficial da Questura exige a versão em italiano do documento original. A tradução simples é invariavelmente recusada nos sportelli da imigração.",
+          ],
+          subsections: [
+            {
+              title: "Permesso por Motivos Familiares",
+              body: [
+                "Para comprovar o vínculo com o familiar residente na Itália, exige-se a tradução juramentada da certidão de nascimento (para filhos) ou de casamento (para cônjuges). Em casos de dependência econômica, declarações de imposto de renda brasileiro traduzidas servem como prova perante a Prefettura.",
+              ],
+            },
+            {
+              title: "Permesso para Estudo",
+              body: [
+                "Estudantes brasileiros devem traduzir o comprovante de matrícula da universidade brasileira (quando em intercâmbio) ou o diploma anterior para justificar a continuidade dos estudos em solo italiano.",
+              ],
+            },
+            {
+              title: "Permesso para Trabalho (Lavoro)",
+              body: [
+                "Contratos de trabalho assinados no exterior ou certificados de qualificação profissional brasileira exigem tradução juramentada asseverata para que o trabalhador possa converter seu visto em autorização de residência.",
+              ],
+            },
           ],
         },
         {
-          title: "Onde a tradução costuma ser exigida",
+          title: "Antecedentes Criminais: O Documento Crítico",
           body: [
-            "Sem esgotar as hipóteses (o motivo do permesso define a lista), os casos mais comuns que envolvem documento brasileiro traduzido:",
-          ],
-          list: [
-            "Reagrupamento/coesão familiar: certidões de nascimento e casamento que comprovam o vínculo.",
-            "Permesso por motivos familiares: documentos de filiação e estado civil.",
-            "Espera de cidadania: certidões da linha familiar.",
-            "Antecedentes criminais, quando aplicável.",
-            "Documentos familiares e declarações solicitadas pela Questura ou Prefettura.",
+            "Para a primeira emissão de certos tipos de permesso e, obrigatoriamente, para o pedido de 'Carta di Soggiorno' (UE longos residentes), a Questura exige o antecedente criminal da Polícia Federal brasileira. O documento deve ser emitido há menos de 90 dias, apostilado no Brasil e traduzido de forma juramentada.",
           ],
         },
         {
-          title: "A regra de ouro",
+          title: "O Kit Postale e a Entrega de Documentos",
           body: [
-            "Documento que comprova fato civil ou jurídico brasileiro tende a precisar de tradução juramentada e, frequentemente, apostila.",
+            "Muitos pedidos de permesso começam nas agências das Poste Italiane (Sportello Amico) através do preenchimento do 'Kit Postale'. No envelope, devem ser incluídas cópias das traduções juramentadas. No dia da convocação na Questura (appuntamento para digitais), os originais brasileiros apostilados e as traduções asseveradas devem ser apresentados fisicamente.",
           ],
         },
         {
-          title: "O erro que mais custa tempo",
+          title: "Diferença entre Tradução e Autenticação",
           body: [
-            "É quase sempre o mesmo: a pessoa monta a pasta do permesso, vai ao balcão e descobre ali que a certidão precisava estar traduzida e apostilada — e volta para casa para recomeçar. Resolver isso antes, com a tradução já no padrão, é a diferença entre um processo limpo e um que se arrasta por renovações.",
-          ],
-        },
-        {
-          title: "Como ajudamos",
-          body: [
-            "Fazemos a tradução juramentada dos seus documentos brasileiros no padrão que a questura espera, com orientação em português sobre o que precisa ou não ser traduzido e apostilado para o seu tipo de permesso — antes de você gastar com página desnecessária. Envia pelo WhatsApp, recebe prazo e valor fechados, recebe pronto.",
-            "As exigências podem variar por motivo do permesso, Questura, Prefettura e documentação do caso. Por isso, não prometemos aprovação: ajudamos a preparar a tradução e a etapa documental com cautela.",
+            "A tradução juramentada asseverata na Itália inclui o juramento solene do tradutor no Tribunale. Este ato confere ao documento brasileiro a mesma força probante de um documento italiano original, essencial para evitar o indeferimento (diniego) do pedido de permanência.",
           ],
         },
       ]}
       faqs={[
         {
-          question: "Todo documento do permesso precisa de tradução juramentada?",
-          answer: "Não todos — depende do motivo do permesso. Os documentos civis brasileiros, em regra, sim.",
+          question: "A Questura aceita tradução feita no Brasil?",
+          answer:
+            "A aceitação depende da província. Comunes e Questuras em Roma e Milão costumam ser mais flexíveis se a tradução brasileira estiver apostilada. No entanto, o padrão de asseverazione italiana é a opção infalível em todo o território nacional.",
         },
         {
-          question: "Preciso apostilar também?",
-          answer: "Com frequência sim, conforme o documento. Orientamos caso a caso.",
+          question: "Preciso traduzir a certidão de nascimento toda vez?",
+          answer:
+            "Para a primeira emissão do permesso por motivo familiar, sim. Uma vez que o vínculo está registrado no sistema do Comune e da Questura, as renovações subsequentes raramente exigem a reapresentação da tradução, a menos que haja mudança no estado civil.",
         },
         {
-          question: "Serve para a primeira emissão e para a renovação?",
-          answer: "Sim, a lógica de documento traduzido vale nos dois momentos.",
+          question: "Quanto tempo demora a tradução para o permesso?",
+          answer:
+            "Documentos individuais (uma certidão ou um antecedente) são finalizados em 48 a 72 horas. Se houver necessidade de asseverazione, o prazo total varia entre 3 e 7 dias úteis.",
         },
         {
-          question: "Quanto tempo leva a tradução?",
-          answer: "Depende do volume; o prazo vem fechado junto do orçamento.",
-        },
-        {
-          question: "Vocês dizem o que eu preciso traduzir?",
-          answer: "Sim — orientamos antes para você não pagar por tradução que não seria exigida.",
-        },
-        {
-          question: "A tradução serve para a Questura?",
-          answer: "Pode servir quando a Questura solicita documentos brasileiros em italiano. A lista final de documentos deve ser confirmada conforme o motivo do permesso.",
+          question: "O passaporte precisa de tradução juramentada?",
+          answer:
+            "Não para o permesso di soggiorno. A Questura utiliza a cópia integral das páginas do passaporte original. A tradução só é exigida para outros documentos brasileiros de suporte.",
         },
       ]}
+      relatedTitle="Material para imigração"
       relatedLinks={[
-        { title: "Tradução juramentada de certidões", href: "/traducao-juramentada-certidoes" },
-        { title: "Tradução de antecedentes criminais para Itália", href: "/traducao-antecedentes-criminais-italia" },
-        { title: "Apostila de Haia e tradução", href: "/apostila-haia-traducao-juramentada-italia" },
-        { title: "Preço da tradução juramentada", href: "/preco-traducao-juramentada-portugues-italiano" }
+        { title: "Tradução de antecedentes criminais", href: "/traducao-antecedentes-criminais-italia" },
+        { title: "Tradução juramentada para residentes", href: "/traducao-juramentada-brasileiro-residente-italia" },
+        { title: "Autoridades italianas em Roma", href: "/autoridades-italianas-documentos-brasileiros" },
+        { title: "Glossário da tradução juramentada", href: "/glossario-traducao-juramentada" },
       ]}
     />
   );

@@ -6,9 +6,11 @@ import Link from "next/link";
 const pagePath = "/apostila-haia-traducao-juramentada-italia";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Apostila de Haia e Tradução Juramentada para Itália (Guia)",
-  description: "Entenda a ordem correta: Apostila de Haia no documento brasileiro, tradução juramentada para italiano e o apostilamento duplo. Evite devoluções.",
+  title: "Apostila de Haia para documentos brasileiros na Itália | Tradução Brasil Itália",
+  description: "Entenda quando documentos brasileiros precisam de apostila de Haia, tradução asseverata e preparação para uso perante órgãos italianos.",
   path: "/apostila-haia-traducao-juramentada-italia",
+  ogTitle: "Apostila de Haia para documentos brasileiros na Itália",
+  ogDescription: "Orientação sobre apostila, tradução para italiano e exigências que podem variar conforme o órgão destinatário.",
 });
 
 export default function Page() {
@@ -17,29 +19,29 @@ export default function Page() {
       pagePath={pagePath}
       eyebrow="Legalização Internacional"
       title="Apostila de Haia e tradução juramentada para Itália"
-      intro="A Convenção da Apostila de Haia substituiu as antigas legalizações consulares demoradas. O Brasil e a Itália são signatários, o que significa que o 'selo' da Apostila valida automaticamente documentos públicos de um país no outro. Mas a ordem entre apostilar e traduzir é a principal causa de erros e perda de dinheiro para requerentes brasileiros."
+      intro="Em muitos procedimentos, documentos brasileiros precisam da Apostila de Haia e de tradução para italiano antes de serem apresentados na Itália. A apostila certifica a origem do documento, mas não traduz o conteúdo nem garante aceitação automática. A ordem e o formato devem ser confirmados com o órgão destinatário."
       sections={[
       {
-        title: "A Ordem Correta do Processo",
+        title: "Fluxo comum do processo",
         body: [
-          "Se você fizer todo o processo no Brasil, existe um fluxo inviolável:",
+          "Quando o procedimento exige apostila e a tradução é feita no Brasil, um fluxo comum é:",
           "1. Emitir o documento original no Brasil.",
           "2. Apostilar o documento original em um cartório brasileiro.",
           "3. Enviar o documento apostilado para o Tradutor Juramentado. (Ele traduzirá o documento E a apostila).",
-          "4. Apostilar a própria Tradução Juramentada.",
-          <span key="link">Este é o chamado <strong>Apostilamento Duplo</strong>, muito comum em processos abordados no nosso <Link href="/traducao-juramentada-para-cidadania-italiana" className="text-[#d9aa52] underline hover:text-white transition-colors">guia de cidadania italiana</Link>.</span>
+          "4. Confirmar se a própria tradução também precisa ser apostilada.",
+          <span key="link">Esse fluxo é conhecido como <strong>apostilamento duplo</strong> em alguns procedimentos. Confirme a exigência no nosso <Link href="/traducao-juramentada-para-cidadania-italiana" className="text-[#d9aa52] underline hover:text-white transition-colors">guia de cidadania italiana</Link> e com o órgão destinatário.</span>
         ]
       },
       {
         title: "Por que a Apostila na Tradução é necessária?",
         body: [
-          "Na Itália, o oficial italiano sabe que o documento original é autêntico por causa da 1ª apostila. Mas como ele sabe que a assinatura do tradutor juramentado no Brasil também é autêntica? Através da 2ª apostila, aplicada na tradução. Sem ela, o papel da tradução não tem fé pública no exterior."
+          "A primeira apostila certifica a assinatura ou o selo do documento original. Quando exigida, uma segunda apostila pode certificar a assinatura do tradutor público brasileiro. O órgão destinatário deve confirmar se essa etapa adicional é necessária."
         ]
       },
       {
         title: "A exceção: Asseverazione na Itália",
         body: [
-          "Se a tradução for feita por um tradutor na Itália, com juramento em Tribunal Italiano (Asseverazione), a 2ª apostila não é necessária, pois a tradução já nasce com validade jurídica italiana. O documento original brasileiro, contudo, ainda precisa da sua apostila."
+          "Quando a tradução é asseverata na Itália, normalmente não se apostila a tradução italiana para uso interno. O documento original brasileiro pode continuar sujeito à Apostila de Haia, conforme o procedimento."
         ]
       }
     ]}

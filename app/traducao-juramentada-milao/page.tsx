@@ -56,7 +56,6 @@ export default function Page() {
       relatedLinks={[
         { title: "Tradução juramentada de diploma", href: "/dichiarazione-di-valore-traducao-diploma" },
         { title: "Tradução de documentos para permesso", href: "/documentos-traducao-permesso-di-soggiorno" },
-        { title: "Preço da tradução juramentada", href: "/preco-traducao-juramentada-portugues-italiano" },
       ]}
     />
   );

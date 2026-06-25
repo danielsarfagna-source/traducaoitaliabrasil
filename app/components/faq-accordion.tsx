@@ -6,7 +6,7 @@ export function FAQAccordion({ items }: { items: readonly (readonly [string, str
           <summary className="cursor-pointer list-none font-serif text-xl text-[#f8f5ee]">
             {question}
           </summary>
-          <p className="mt-4 leading-7 text-[#f8f5ee]/72">{answer}</p>
+          <p className="mt-4 leading-7 text-[#f8f5ee]/72 text-justify">{answer}</p>
         </details>
       ))}
     </div>

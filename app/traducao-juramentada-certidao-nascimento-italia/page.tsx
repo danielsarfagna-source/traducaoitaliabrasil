@@ -19,7 +19,7 @@ export default function Page() {
       pagePath={pagePath}
       schemaType="Service"
       description="Serviço de tradução juramentada de certidão de nascimento brasileira para uso na Itália."
-      intro="A certidão de nascimento é o documento mais importante na identificação civil. Para processos de cidadania italiana, casamento na Itália ou registro de filhos, a certidão brasileira precisa de tradução juramentada rigorosa e apostilamento para ter validade perante os oficiais italianos."
+      intro="Sim. Em muitos processos de cidadania, casamento ou registro civil, a certidão de nascimento brasileira precisa de tradução para italiano e pode precisar de Apostila de Haia. A via adequada e o formato da certidão dependem do órgão destinatário."
       sections={[
       {
         title: "Por que a certidão de Breve Relato não serve?",

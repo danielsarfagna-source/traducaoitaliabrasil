@@ -32,7 +32,7 @@ Antes de publicar, preencher os dados reais nas páginas legais:
 - `[NOME DO TITULAR]`
 - `[E-MAIL DE CONTATO]`
 
-O WhatsApp já está configurado como `+353 83 327 8766`.
+O WhatsApp já está configurado como `+39 392 460 5784`.
 
 Rotas principais:
 

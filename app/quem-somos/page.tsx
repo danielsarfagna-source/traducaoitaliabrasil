@@ -4,8 +4,8 @@ import { PageShell } from "../components/page-shell";
 import { WhatsAppButton } from "../components/whatsapp-button";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Quem somos",
-  description: "Serviço especializado em tradução juramentada português para italiano, tradução italiano para português, apostilamento e orientação documental.",
+  title: "Sobre a Tradução Brasil Itália | Documentos brasileiros na Itália",
+  description: "Conheça o serviço especializado em tradução de documentos brasileiros para italiano, atendimento em português e orientação sobre apostila e asseverazione.",
   path: "/quem-somos",
 });
 
@@ -13,13 +13,13 @@ const blocks = ["Atendimento humano", "Clareza documental", "Foco em brasileiros
 
 export default function Page() {
   return (
-    <PageShell title="Quem somos" pagePath="/quem-somos" eyebrow="Institucional">
+    <PageShell title="Sobre a Tradução Brasil Itália" pagePath="/quem-somos" eyebrow="Institucional">
       <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-        <article className="space-y-5 rounded-[8px] border border-[#d8a84f]/32 bg-[#07111f]/76 p-8 text-lg leading-8 text-[#f8f5ee]/76">
-          <p>Somos um serviço especializado em tradução juramentada português → italiano, tradução italiano → português, apostilamento e orientação documental para brasileiros que precisam utilizar documentos na Itália, no Brasil ou no exterior.</p>
-          <p>Atendemos principalmente pessoas em processos de cidadania italiana, imigração, casamento, divórcio, estudo, reconhecimento de diplomas, certidões brasileiras, documentos italianos e demais situações em que a documentação precisa ser apresentada perante órgãos oficiais.</p>
-          <p>Nosso objetivo é simplificar uma etapa que costuma gerar insegurança: entender qual documento precisa ser traduzido, quando é necessário apostilar, qual idioma utilizar e como preparar o material para evitar atrasos.</p>
-          <p>O atendimento é feito em português, com comunicação clara e direta, para que o cliente saiba exatamente o que está contratando e qual será o próximo passo.</p>
+        <article className="space-y-5 rounded-[8px] border border-[#d8a84f]/32 bg-[#07111f]/76 p-8 text-lg leading-8 text-[#f8f5ee]/76 text-justify">
+          <p>A Tradução Brasil Itália é um serviço especializado em tradução de documentos brasileiros para uso oficial na Itália. O atendimento é feito em português, com foco em brasileiros que vivem na Itália ou precisam apresentar documentos brasileiros perante órgãos italianos.</p>
+          <p>O serviço auxilia na tradução de certidões, CNH, antecedentes criminais, diplomas, procurações e outros documentos civis, além de orientar sobre apostila, asseverazione e exigências comuns dos órgãos destinatários.</p>
+          <p>Também são atendidas demandas relacionadas a cidadania, residência, casamento, estudo, trabalho, reconhecimento de diplomas e outros procedimentos que envolvam documentos entre Brasil e Itália.</p>
+          <p>Como cada autoridade pode aplicar requisitos próprios, a análise considera a finalidade do documento e recomenda confirmar a exigência específica antes do protocolo.</p>
           <WhatsAppButton className="inline-block rounded-[8px] bg-[#d8a84f] px-6 py-4 text-sm font-black uppercase tracking-[0.08em] text-[#020817]">
             Fale conosco pelo WhatsApp
           </WhatsAppButton>

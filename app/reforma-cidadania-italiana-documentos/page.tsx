@@ -3,8 +3,8 @@ import { createPageMetadata } from "../lib/seo";
 import { ArticlePage } from "../components/article-page";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Reforma da Cidadania Italiana 2025 e Documentos",
-  description: "Entenda, com cautela, como a Lei 74/2025 e a Sentença 63/2026 reforçam a importância de certidões, apostila e tradução juramentada.",
+  title: "Reforma da cidadania italiana — Lei 74/2025 e Corte Costituzionale",
+  description: "A reforma da cidadania italiana, seus efeitos documentais e a importância de certidões, Apostila e tradução. Conteúdo informativo atualizado.",
   path: "/reforma-cidadania-italiana-documentos",
 });
 
@@ -12,9 +12,11 @@ export default function Page() {
   return (
     <ArticlePage
       eyebrow="Cidadania Italiana"
-      title="Reforma da cidadania italiana (Lei 74/2025): o que muda nos seus documentos"
+      title="Reforma da cidadania italiana (Lei 74/2025) — o que mudou nos documentos"
       pagePath="/reforma-cidadania-italiana-documentos"
       schemaType="Article"
+      datePublished="2025-05-24"
+      dateModified="2026-06-06"
       description="Artigo informativo sobre reforma da cidadania italiana, documentos brasileiros, apostila e tradução juramentada."
       intro="A Lei 74/2025 alterou regras relevantes de cidadania italiana por descendência, e a Sentença 63/2026 da Corte Constitucional confirmou pontos centrais da reforma. Este texto não substitui análise jurídica: o foco aqui é explicar por que a parte documental ficou ainda mais sensível."
       sections={[

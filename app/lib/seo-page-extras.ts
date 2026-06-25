@@ -1,0 +1,227 @@
+export type PageFaq = { question: string; answer: string };
+export type ContextualLink = { href: string; text: string; before: string; after: string };
+export type OfficialSource = { href: string; title: string };
+
+export const officialSources: Record<string, OfficialSource[]> = {
+  "/traducao-cnh-dirigir-na-italia": [
+    { href: "https://www.mit.gov.it/nfsmitgov/files/media/normativa/2025-04/ELENCO_STATI_allegato_Circolare_BRASILE.pdf", title: "MIT — países com habilitações convertíveis" },
+    { href: "https://www.mit.gov.it/temi/patenti-mezzi-e-abilitazioni/patenti-mezzi-stradali/normativa", title: "MIT — normativa sobre habilitações" },
+  ],
+  "/reforma-cidadania-italiana-documentos": [
+    { href: "https://www.gazzettaufficiale.it/eli/id/2025/05/23/25G00082/SG", title: "Gazzetta Ufficiale — Lei 74/2025" },
+    { href: "https://www.cortecostituzionale.it/scheda-pronuncia/2026/63", title: "Corte Costituzionale — Sentença 63/2026" },
+    { href: "https://www.esteri.it/it/servizi-consolari-e-visti/italiani-all-estero/cittadinanza/", title: "MAECI — cidadania italiana" },
+  ],
+  "/apostilar-documento-italiano-na-italia": [
+    { href: "https://procura-ferrara.giustizia.it/it/apostille_e_legalizzazioni.page", title: "Ministero della Giustizia — Apostille e legalizações" },
+    { href: "https://procura-rovigo.giustizia.it/it/uffcivile.page?contentId=UFF7989", title: "Procura della Repubblica — competência para Apostille" },
+  ],
+  "/autoridades-italianas-documentos-brasileiros": [
+    { href: "https://www.interno.gov.it", title: "Ministero dell'Interno" },
+    { href: "https://www.giustizia.it", title: "Ministero della Giustizia" },
+    { href: "https://www.esteri.it", title: "MAECI" },
+    { href: "https://www.mur.gov.it", title: "MUR" },
+    { href: "https://www.salute.gov.it", title: "Ministero della Salute" },
+    { href: "https://www.mit.gov.it", title: "Ministero delle Infrastrutture e dei Trasporti" },
+  ],
+};
+
+export const faqOverrides: Record<string, PageFaq[]> = {
+  "/apostilar-documento-italiano-na-italia": [
+    { question: "O que é Apostille de Haia?", answer: "É a certificação internacional que autentica a origem de uma assinatura pública para uso entre países participantes da Convenção da Haia." },
+    { question: "Apostille substitui legalização consular?", answer: "Sim, quando o documento circula entre países para os quais a Convenção da Haia está em vigor." },
+    { question: "Quem emite Apostille no Brasil?", answer: "Cartórios autorizados pelo Conselho Nacional de Justiça emitem a Apostila de documentos brasileiros." },
+    { question: "Quem emite Apostille na Itália?", answer: "Procura della Repubblica, Prefettura e autoridades setoriais atuam conforme a natureza do documento e da assinatura." },
+    { question: "Apostille e tradução juramentada são a mesma coisa?", answer: "Não. A Apostille autentica a assinatura pública; a tradução converte o conteúdo para outro idioma." },
+    { question: "Devo apostilar o documento original antes da tradução?", answer: "No fluxo Brasil-Itália, o documento brasileiro é apostilado antes de ser traduzido na Itália." },
+    { question: "A tradução juramentada também precisa ser apostilada?", answer: "A exigência depende do país onde a tradução foi formalizada e do órgão que receberá o conjunto." },
+    { question: "Quanto custa apostilar um documento?", answer: "As taxas seguem a autoridade e a tabela vigente. O valor é confirmado diretamente no órgão competente." },
+    { question: "Quanto tempo demora uma Apostille?", answer: "O prazo depende da autoridade, da cidade, do agendamento e de validações anteriores exigidas para a assinatura." },
+    { question: "Apostille tem validade?", answer: "A Apostille certifica uma assinatura sem prazo próprio, mas o documento apostilado pode ter validade administrativa limitada." },
+  ],
+  "/traducao-cnh-dirigir-na-italia": [
+    { question: "Brasileiro pode dirigir na Itália com CNH brasileira?", answer: "Turista e residente seguem regras diferentes. A CNH deve estar válida e acompanhada dos documentos exigidos pela legislação italiana vigente." },
+    { question: "Quanto tempo a CNH brasileira vale na Itália?", answer: "O marco relevante para residentes é contado conforme as regras italianas aplicáveis à residência. Confirme a data e a situação na Motorizzazione." },
+    { question: "Como converter CNH brasileira em patente di guida italiana?", answer: "O pedido é apresentado à Motorizzazione com habilitação válida, documentos pessoais, exame médico, tradução e demais itens previstos no acordo vigente." },
+    { question: "O acordo bilateral Brasil-Itália sobre patente existe?", answer: "A aplicação do acordo deve ser confirmada na data do pedido, porque vigência, categorias e condições podem ser atualizadas." },
+    { question: "Categorias brasileiras equivalem automaticamente às italianas?", answer: "Não. A Motorizzazione aplica as tabelas e limites do acordo vigente; a tradução apenas reproduz a categoria brasileira." },
+    { question: "Precisa fazer exame para converter CNH na Itália?", answer: "Quando a conversão direta se aplica, o procedimento segue o acordo. Fora das condições, a autoridade pode exigir o percurso italiano de habilitação." },
+    { question: "CNH vencida pode ser traduzida e usada na Itália?", answer: "A tradução reproduz o documento, mas não devolve validade à CNH vencida." },
+    { question: "EAR entra na tradução?", answer: "Sim. A observação Exerce Atividade Remunerada é reproduzida sem criar equivalência automática com habilitação profissional italiana." },
+    { question: "Quanto tempo demora a tradução juramentada de CNH?", answer: "O prazo é informado após análise de frente, verso, legibilidade e modalidade formal exigida." },
+    { question: "Para turista, basta a Permissão Internacional para Dirigir?", answer: "A documentação exigida deve ser confirmada conforme a situação, o veículo e as regras italianas vigentes." },
+  ],
+  "/dichiarazione-di-valore-traducao-diploma": [
+    { question: "Como reconhecer diploma brasileiro na Itália?", answer: "Defina primeiro a finalidade acadêmica ou profissional e siga as instruções da universidade, autoridade ou conselho competente." },
+    { question: "O que é Dichiarazione di Valore e quem emite?", answer: "É uma declaração consular sobre o título no sistema de origem, emitida pela representação italiana competente no Brasil." },
+    { question: "CIMEA e MUR: qual a diferença?", answer: "O CIMEA oferece serviços técnicos de comparabilidade e verificação; o MUR coordena políticas do ensino superior italiano." },
+    { question: "Diploma sem histórico pode ser traduzido?", answer: "Pode ser traduzido, mas o destinatário frequentemente exige também o histórico para avaliar disciplinas, notas e carga horária." },
+    { question: "Histórico escolar precisa de tradução juramentada?", answer: "Quando integra um procedimento oficial, deve seguir a modalidade de tradução indicada pela instituição." },
+    { question: "Como a carga horária é traduzida?", answer: "Horas, créditos e períodos são reproduzidos como constam do documento, com terminologia coerente e sem converter o valor acadêmico." },
+    { question: "Diploma de mestrado brasileiro equivale a qual nível italiano?", answer: "A equivalência não é automática; depende da avaliação da instituição ou autoridade competente." },
+    { question: "Doutorado precisa de Dichiarazione di Valore?", answer: "A exigência depende da finalidade e das instruções do destinatário." },
+    { question: "Posso me inscrever em laurea magistrale com diploma brasileiro?", answer: "A universidade avalia requisitos de acesso, compatibilidade do título e documentação estrangeira." },
+    { question: "Para concurso público italiano, qual é a sequência?", answer: "Leia o edital, identifique a autoridade de reconhecimento, prepare os originais, Apostila e tradução no formato solicitado." },
+  ],
+  "/documentos-traducao-permesso-di-soggiorno": [
+    { question: "Quais documentos brasileiros entram no pedido de permesso?", answer: "A categoria define a lista. Certidões, antecedentes e provas de vínculo estão entre os documentos brasileiros mais frequentes." },
+    { question: "Permesso per attesa cittadinanza exige quais documentos?", answer: "Exige a documentação ligada ao processo de cidadania e à situação administrativa indicada pela autoridade competente." },
+    { question: "Permesso per motivi familiari exige quais documentos?", answer: "Certidões e provas do vínculo familiar devem estar atualizadas e formalizadas segundo as instruções do pedido." },
+    { question: "Antecedentes criminais entram no permesso?", answer: "Entram quando a categoria ou a Questura os exige. A via deve estar dentro da validade administrativa aceita." },
+    { question: "Posso renovar permesso com a mesma documentação?", answer: "A renovação exige documentos atuais; originais vencidos ou alterados precisam ser substituídos." },
+    { question: "Permesso para estudante exige quais documentos brasileiros?", answer: "A lista pode incluir títulos de estudo e documentos pessoais, além dos comprovantes italianos de matrícula, recursos e cobertura." },
+    { question: "Ricongiungimento exige comprovação de vínculo?", answer: "Sim. Certidões e outros atos demonstram o vínculo familiar declarado no procedimento." },
+    { question: "Documentos do nucleo familiare exigem tradução juramentada?", answer: "Documentos brasileiros apresentados oficialmente seguem a modalidade indicada pela autoridade." },
+    { question: "Onde dou entrada no permesso em Roma?", answer: "O fluxo começa pelo canal indicado para a categoria e segue para a Questura di Roma conforme convocação." },
+    { question: "Como funcionam kit postale e marca da bollo?", answer: "O kit reúne formulários e comprovantes; taxas e marcas seguem as instruções vigentes do procedimento." },
+  ],
+  "/traducao-sentenca-divorcio-italia": [
+    { question: "Como reconhecer divórcio brasileiro na Itália?", answer: "Apresente as peças e certificações exigidas pelo Comune ou autoridade judicial, com Apostila e tradução formal." },
+    { question: "Sentença de divórcio precisa de trânsito em julgado?", answer: "Sim, quando a autoridade precisa comprovar que a decisão é definitiva." },
+    { question: "A tradução pode abranger apenas o dispositivo?", answer: "Somente quando o destinatário autoriza. A regra segura é preparar todas as peças exigidas no procedimento." },
+    { question: "Divórcio extrajudicial segue o mesmo caminho?", answer: "Não. A escritura pública tem natureza e conjunto documental diferentes da sentença judicial." },
+    { question: "A certidão de casamento averbada substitui a sentença?", answer: "Não em todos os procedimentos. O destinatário define se exige ambos." },
+    { question: "Trascrizione automática vale para todo divórcio?", answer: "O regime aplicável depende dos requisitos legais, da decisão e do procedimento utilizado." },
+    { question: "Preciso de advogado na Itália?", answer: "A via administrativa ou judicial e a necessidade de advogado devem ser definidas conforme o caso." },
+    { question: "Como funciona o atendimento?", answer: "Envie as peças completas e a orientação do destinatário para análise do escopo, prazo e orçamento." },
+  ],
+  "/traducao-documentos-casamento-italia": [
+    { question: "Quais documentos brasileiros são usados para casar na Itália?", answer: "Certidão de nascimento, Nulla Osta e documentos sobre divórcio ou viuvez integram a lista conforme a situação pessoal e o Comune." },
+    { question: "O que é o Nulla Osta al matrimonio?", answer: "É a declaração de inexistência de impedimento ao casamento emitida segundo o procedimento consular aplicável." },
+    { question: "Onde se obtém o Nulla Osta?", answer: "O brasileiro na Itália segue as instruções da representação consular brasileira competente." },
+    { question: "Antecedentes criminais são exigidos para casar?", answer: "Somente quando a autoridade responsável os inclui na lista do procedimento." },
+    { question: "Brasileiro divorciado precisa de documentos adicionais?", answer: "Sim. Certidão atualizada, sentença, escritura ou certificação definitiva podem ser exigidas." },
+    { question: "Como funcionam as pubblicazioni di matrimonio?", answer: "O Comune publica o pedido conforme as regras do estado civil antes da celebração." },
+    { question: "Casamento religioso produz efeitos civis?", answer: "Produz quando celebrado e registrado segundo a modalidade reconhecida pelo sistema italiano." },
+    { question: "O casamento italiano precisa ser registrado no Brasil?", answer: "O registro perante a autoridade brasileira permite atualizar o estado civil e produzir efeitos documentais no Brasil." },
+  ],
+  "/traducao-antecedentes-criminais-italia": [
+    { question: "Quem emite antecedentes criminais no Brasil?", answer: "Polícia Federal, Justiça Federal e Justiças Estaduais emitem documentos diferentes." },
+    { question: "Qual antecedente a Itália exige?", answer: "A autoridade destinatária define se exige atestado da Polícia Federal, certidões judiciais ou combinação de documentos." },
+    { question: "A certidão pode ser emitida online?", answer: "Sim, quando o órgão emissor disponibiliza emissão e validação eletrônica." },
+    { question: "Precisa de Apostila?", answer: "Documento público brasileiro destinado ao uso oficial na Itália segue a formalização internacional exigida pelo procedimento." },
+    { question: "Qual é a validade administrativa?", answer: "O órgão italiano define quão recente deve ser o documento. Emita perto da data de protocolo." },
+    { question: "O que significa nada consta?", answer: "É o resultado declarado pelo emissor segundo a base e o alcance daquela certidão." },
+    { question: "Casellario italiano substitui antecedentes brasileiros?", answer: "Não. Os documentos cobrem registros e jurisdições diferentes." },
+    { question: "Como evitar que o documento vença?", answer: "Coordene emissão, Apostila, tradução e protocolo antes de iniciar." },
+  ],
+  "/traducao-documentos-medicos-italia": [
+    { question: "Quais documentos médicos podem ser traduzidos?", answer: "Atestados, prontuários, laudos, vacinação, receitas, diplomas, históricos e certificados profissionais." },
+    { question: "Prontuário precisa de tradução juramentada?", answer: "A modalidade depende do hospital, seguradora, autoridade ou finalidade administrativa." },
+    { question: "Como proteger os dados de saúde?", answer: "Envie apenas os documentos necessários por canal controlado e limite o acesso às pessoas envolvidas no serviço." },
+    { question: "Medicamentos são traduzidos pelo nome comercial?", answer: "A tradução identifica princípio ativo e informação do original sem substituir avaliação médica." },
+    { question: "CID é mantido na tradução?", answer: "O código e a descrição presentes no documento são reproduzidos com terminologia adequada." },
+    { question: "Diploma de saúde exige reconhecimento?", answer: "Sim. Tradução é uma etapa; Ministero della Salute e conselho profissional avaliam habilitação." },
+    { question: "Carteira de vacinação pode ser traduzida?", answer: "Sim, preservando datas, lotes, fabricantes e doses legíveis." },
+    { question: "A tradução substitui consulta médica?", answer: "Não. Ela comunica o conteúdo documental e não oferece diagnóstico ou prescrição." },
+  ],
+  "/traducao-contratos-imoveis-italia": [
+    { question: "Brasileiro pode comprar imóvel na Itália?", answer: "A operação deve ser estruturada com notaio e assessoria adequada, observando identificação fiscal e requisitos do comprador estrangeiro." },
+    { question: "O que é compromesso?", answer: "É o contrato preliminar que organiza condições e obrigações antes do ato definitivo." },
+    { question: "O que é rogito?", answer: "É o ato notarial definitivo de compra e venda." },
+    { question: "Procuração brasileira vale na Itália?", answer: "Vale quando atende à forma exigida, recebe Apostila e tradução apropriada ao ato." },
+    { question: "Contrato social de LTDA equivale a SRL?", answer: "Não automaticamente. As formas têm semelhanças, mas pertencem a sistemas jurídicos diferentes." },
+    { question: "Preciso traduzir documentos bancários?", answer: "O banco, o notaio ou o procedimento de origem de recursos define os documentos necessários." },
+    { question: "O tradutor substitui advogado ou notaio?", answer: "Não. A tradução preserva o texto; a estrutura jurídica do negócio cabe aos profissionais responsáveis." },
+    { question: "Como funciona o orçamento?", answer: "O escopo é definido após leitura dos documentos e das instruções do notaio ou destinatário." },
+  ],
+};
+
+export const contextualLinks: Record<string, ContextualLink[]> = {
+  "/traducao-juramentada-italiano": [
+    { href: "/traducao-juramentada-para-cidadania-italiana", text: "tradução juramentada para cidadania italiana", before: "A preparação de certidões se conecta diretamente à ", after: "." },
+    { href: "/traducao-juramentada-certidoes", text: "tradução juramentada de certidões", before: "Nascimento, casamento e óbito são detalhados em ", after: "." },
+    { href: "/traducao-juramentada-roma", text: "tradução juramentada em Roma", before: "Para procedimentos no Lazio, consulte ", after: "." },
+  ],
+  "/traducao-juramentada-para-cidadania-italiana": [
+    { href: "/traducao-juramentada-italiano", text: "tradução juramentada italiano", before: "O conceito geral está explicado em ", after: "." },
+    { href: "/apostilar-documento-italiano-na-italia", text: "Apostila de Haia na Itália", before: "A circulação internacional dos atos é detalhada no guia sobre ", after: "." },
+    { href: "/reforma-cidadania-italiana-documentos", text: "reforma da cidadania italiana", before: "As mudanças legislativas estão organizadas em ", after: "." },
+  ],
+  "/traducao-juramentada-certidoes": [
+    { href: "/traducao-juramentada-italiano", text: "tradução juramentada português italiano", before: "A visão geral do serviço está em ", after: "." },
+    { href: "/traducao-juramentada-para-cidadania-italiana", text: "tradução para cidadania italiana", before: "O uso das certidões na linha familiar aparece em ", after: "." },
+    { href: "/traducao-sentenca-divorcio-italia", text: "tradução juramentada de sentença de divórcio", before: "Quando existe divórcio, consulte também ", after: "." },
+  ],
+  "/traducao-juramentada-roma": [
+    { href: "/traduzione-giurata-portoghese-italiano-roma", text: "traduzione giurata portoghese italiano a Roma", before: "Esta página em italiano: ", after: "." },
+    { href: "/autoridades-italianas-documentos-brasileiros", text: "autoridades italianas", before: "Comune, Tribunale e Questura estão organizados no guia de ", after: "." },
+    { href: "/documentos-traducao-permesso-di-soggiorno", text: "documentos para permesso di soggiorno", before: "Para a Questura, veja ", after: "." },
+  ],
+  "/traduzione-asseverata-portoghese-italiano": [
+    { href: "/traducao-juramentada-italiano", text: "Tradução juramentada italiano", before: "Versione in portoghese di questa pagina: ", after: "." },
+    { href: "/traduzione-giurata-portoghese-italiano-roma", text: "traduzione giurata portoghese italiano a Roma", before: "Per il servizio locale, consulta ", after: "." },
+    { href: "/glossario-traducao-juramentada", text: "glossário da tradução juramentada", before: "I termini tecnici sono raccolti nel ", after: "." },
+  ],
+  "/traduzione-giurata-portoghese-italiano-roma": [
+    { href: "/traducao-juramentada-roma", text: "Tradução juramentada em Roma", before: "Versione in portoghese di questa pagina: ", after: "." },
+    { href: "/traduzione-asseverata-portoghese-italiano", text: "traduzione asseverata portoghese italiano", before: "La guida generale è disponibile in ", after: "." },
+    { href: "/autoridades-italianas-documentos-brasileiros", text: "guia oficial para brasileiros", before: "Gli enti italiani sono raccolti nel ", after: "." },
+  ],
+  "/apostilar-documento-italiano-na-italia": [
+    { href: "/traducao-juramentada-italiano", text: "tradução juramentada italiano", before: "A etapa linguística está detalhada em ", after: "." },
+    { href: "/traducao-juramentada-certidoes", text: "tradução juramentada de certidões", before: "Para atos de estado civil, consulte ", after: "." },
+    { href: "/autoridades-italianas-documentos-brasileiros", text: "autoridades italianas", before: "Procura e Prefettura aparecem no guia de ", after: "." },
+  ],
+  "/traducao-cnh-dirigir-na-italia": [
+    { href: "/traducao-juramentada-italiano", text: "tradução juramentada português italiano", before: "A modalidade geral é explicada em ", after: "." },
+    { href: "/traducao-juramentada-roma", text: "tradução juramentada em Roma", before: "Para a Motorizzazione no Lazio, veja ", after: "." },
+    { href: "/autoridades-italianas-documentos-brasileiros", text: "guia oficial para brasileiros", before: "A competência do MIT e da Motorizzazione está no ", after: "." },
+  ],
+  "/dichiarazione-di-valore-traducao-diploma": [
+    { href: "/traducao-juramentada-italiano", text: "tradução juramentada italiano", before: "A tradução do conjunto acadêmico segue os princípios de ", after: "." },
+    { href: "/autoridades-italianas-documentos-brasileiros", text: "autoridades italianas", before: "MUR, CIMEA e universidades estão no guia de ", after: "." },
+    { href: "/glossario-traducao-juramentada", text: "glossário da tradução juramentada", before: "Os termos acadêmicos e documentais aparecem no ", after: "." },
+  ],
+  "/documentos-traducao-permesso-di-soggiorno": [
+    { href: "/traducao-juramentada-certidoes", text: "tradução juramentada de certidão de nascimento", before: "A prova de filiação exige atenção à ", after: "." },
+    { href: "/traducao-antecedentes-criminais-italia", text: "tradução juramentada de antecedentes criminais", before: "Quando a Questura exige certidão penal, consulte ", after: "." },
+    { href: "/traducao-juramentada-roma", text: "tradução juramentada em Roma", before: "Para pedidos na capital, veja ", after: "." },
+  ],
+  "/reforma-cidadania-italiana-documentos": [
+    { href: "/traducao-juramentada-para-cidadania-italiana", text: "tradução para cidadania italiana", before: "A organização da pasta está em ", after: "." },
+    { href: "/traducao-juramentada-certidoes", text: "tradução juramentada de certidões", before: "Inteiro teor e averbações são tratados em ", after: "." },
+    { href: "/autoridades-italianas-documentos-brasileiros", text: "guia oficial para brasileiros", before: "MAECI, Comune e Tribunale estão no ", after: "." },
+  ],
+  "/traducao-sentenca-divorcio-italia": [
+    { href: "/traducao-documentos-casamento-italia", text: "tradução para casamento na Itália", before: "Para um novo matrimônio, veja ", after: "." },
+    { href: "/traducao-juramentada-certidoes", text: "tradução juramentada de certidões", before: "A certidão de casamento averbada integra a ", after: "." },
+    { href: "/apostilar-documento-italiano-na-italia", text: "Apostila de Haia na Itália", before: "O percurso inverso de atos italianos está em ", after: "." },
+  ],
+  "/traducao-documentos-casamento-italia": [
+    { href: "/traducao-sentenca-divorcio-italia", text: "tradução juramentada de sentença de divórcio", before: "A pessoa divorciada deve conferir a ", after: "." },
+    { href: "/traducao-juramentada-certidoes", text: "tradução juramentada de certidão de nascimento", before: "A certidão principal é detalhada em ", after: "." },
+    { href: "/traducao-juramentada-roma", text: "tradução juramentada em Roma", before: "Para casamento em Roma, consulte ", after: "." },
+  ],
+  "/traducao-antecedentes-criminais-italia": [
+    { href: "/documentos-traducao-permesso-di-soggiorno", text: "documentos para permesso di soggiorno", before: "A certidão penal pode integrar os ", after: "." },
+    { href: "/traducao-documentos-casamento-italia", text: "Nulla Osta al matrimonio", before: "No contexto matrimonial, diferencie antecedentes e ", after: "." },
+    { href: "/traducao-juramentada-italiano", text: "tradução juramentada português italiano", before: "A formalização segue a orientação de ", after: "." },
+  ],
+  "/traducao-documentos-medicos-italia": [
+    { href: "/dichiarazione-di-valore-traducao-diploma", text: "Dichiarazione di Valore", before: "O reconhecimento acadêmico pode envolver a ", after: "." },
+    { href: "/traducao-juramentada-italiano", text: "tradução juramentada italiano", before: "A modalidade formal é explicada em ", after: "." },
+    { href: "/autoridades-italianas-documentos-brasileiros", text: "autoridades italianas", before: "Ministero della Salute e ordini estão no guia de ", after: "." },
+  ],
+  "/traducao-contratos-imoveis-italia": [
+    { href: "/traducao-juramentada-italiano", text: "tradução juramentada italiano", before: "Contratos estrangeiros seguem a ", after: "." },
+    { href: "/apostilar-documento-italiano-na-italia", text: "apostilar documento italiano", before: "Para atos que seguirão ao Brasil, veja como ", after: "." },
+    { href: "/glossario-traducao-juramentada", text: "glossário da tradução juramentada", before: "Notaio, procura e legalizzazione estão no ", after: "." },
+  ],
+  "/autoridades-italianas-documentos-brasileiros": [
+    { href: "/apostilar-documento-italiano-na-italia", text: "Apostila de Haia na Itália", before: "A competência de Procura e Prefettura é aplicada no guia de ", after: "." },
+    { href: "/dichiarazione-di-valore-traducao-diploma", text: "tradução de diploma brasileiro na Itália", before: "MUR e CIMEA participam da ", after: "." },
+    { href: "/documentos-traducao-permesso-di-soggiorno", text: "documentos para permesso di soggiorno", before: "A Questura recebe os ", after: "." },
+    { href: "/traduzione-giurata-portoghese-italiano-roma", text: "traduzione giurata portoghese italiano a Roma", before: "A versão local em italiano é ", after: "." },
+  ],
+  "/glossario-traducao-juramentada": [
+    { href: "/traduzione-asseverata-portoghese-italiano", text: "traduzione asseverata portoghese italiano", before: "O termo asseverazione é aplicado em ", after: "." },
+    { href: "/apostilar-documento-italiano-na-italia", text: "Apostila de Haia na Itália", before: "A definição prática aparece em ", after: "." },
+    { href: "/dichiarazione-di-valore-traducao-diploma", text: "Dichiarazione di Valore", before: "A documentação acadêmica é explicada em ", after: "." },
+  ],
+  "/traducao-juramentada-brasileiro-residente-italia": [
+    { href: "/traducao-juramentada-italiano", text: "tradução juramentada português italiano", before: "O serviço geral está em ", after: "." },
+    { href: "/traducao-cnh-dirigir-na-italia", text: "tradução juramentada de CNH brasileira", before: "Para habilitação, consulte ", after: "." },
+    { href: "/glossario-traducao-juramentada", text: "glossário da tradução juramentada", before: "Os termos usados pelos órgãos estão no ", after: "." },
+  ],
+};

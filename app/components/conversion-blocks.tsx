@@ -10,10 +10,10 @@ export function CNHBlock() {
             <h2 className="font-serif text-3xl text-white sm:text-4xl">
               Tradução de CNH brasileira para conversão na Itália
             </h2>
-            <p className="mt-6 text-lg leading-relaxed text-white/70">
+            <p className="mt-6 text-lg leading-relaxed text-justify">
               Se você precisa apresentar sua CNH brasileira na Motorizzazione, nós orientamos qual tradução usar, quais dados precisam estar corretos e como evitar erro em categoria, validade, número do documento e observações.
             </p>
-            <p className="mt-4 text-lg leading-relaxed text-white/70 font-medium">
+            <p className="mt-4 text-lg leading-relaxed text-justify">
               Envie foto da frente e verso da CNH pelo WhatsApp e receba orientação sobre prazo, valor e próximos passos.
             </p>
           </div>
@@ -56,7 +56,7 @@ export function DocumentCards() {
                 </svg>
               </div>
               <h3 className="font-serif text-xl text-[#d9aa52]">{doc.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/60">{doc.desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-justify">{doc.desc}</p>
             </div>
           ))}
         </div>
@@ -88,7 +88,7 @@ export function HowItWorks() {
                 </span>
                 <div className="h-px w-full bg-[#c99a45]/20 hidden lg:block" />
               </div>
-              <p className="mt-6 text-lg text-white/80 leading-snug">{step}</p>
+              <p className="mt-6 text-lg text-justify">{step}</p>
             </div>
           ))}
         </div>
