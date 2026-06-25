@@ -32,6 +32,33 @@ export function GoogleAdsTag() {
           gtag('config', '${GOOGLE_ADS_CONVERSION_ID}');
         `}
       </Script>
+      <Script id="google-ads-wa-delegate" strategy="afterInteractive">
+        {`
+          // Delegação global: dispara a conversão "Clique WhatsApp" para
+          // QUALQUER link <a href="wa.me/..."> da página, mesmo os que não
+          // passam pelo componente <WhatsAppButton/> (header, footer, etc.).
+          (function(){
+            if (window.__waConvBound) return;
+            window.__waConvBound = true;
+            document.addEventListener('click', function(ev){
+              var el = ev.target;
+              while (el && el !== document.body) {
+                if (el.tagName === 'A' && el.href && /wa\\.me\\//.test(el.href)) {
+                  if (typeof window.gtag === 'function') {
+                    window.gtag('event', 'conversion', {
+                      send_to: '${GOOGLE_ADS_CONVERSION_ID}/${GOOGLE_ADS_WHATSAPP_LABEL}',
+                      value: 1.0,
+                      currency: 'BRL'
+                    });
+                  }
+                  return;
+                }
+                el = el.parentElement;
+              }
+            }, { capture: true });
+          })();
+        `}
+      </Script>
     </>
   );
 }
